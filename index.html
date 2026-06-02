@@ -196,8 +196,9 @@
       .aspect-square2 { aspect-ratio: 1 / 1; }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+@media (prefers-reduced-motion: reduce) {
+  .spa-card { transition-duration: 0.01ms !important; }
+}
     }
   </style>
   <style>
