@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MIKAN · Pet Shop en Hurlingham · Delivery, Peluquería y Más</title>
-  <meta name="description" content="Pet shop en Hurlingham con delivery a domicilio, peluquería canina, alimentos balanceados, accesorios y rescate de gatitos. Escribinos por WhatsApp." />
+  <title>MIKAN · Pet Shop en Hurlingham · Delivery, Alimentos y Más</title>
+  <meta name="description" content="Pet shop en Hurlingham con delivery a domicilio, alimentos balanceados, accesorios, camas y juguetes. +10 años en el barrio. Escribinos por WhatsApp." />
 
   <!-- Fuentes (mismas del diseño original) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,15 +21,18 @@
       theme: {
         extend: {
           colors: {
-            white: "#FBF6EC",
+            // "white" se reutiliza como TINTA OSCURA: en tema claro, text-white = texto café oscuro legible
+            white: "#1F1300",
             mikan: {
-              yellow: "#F2B233", "yellow-light": "#FAD27A", "yellow-dark": "#CE8E1E", "yellow-warm": "#E5A92C",
-              red: "#D9543B", "red-light": "#E8775E", "red-dark": "#B23E28", "red-deep": "#8A3320",
-              black: "#262019", "black-soft": "#2D261D", "black-deeper": "#1C1812", "black-pure": "#140F0A",
-              gray: "#332B20", "gray-mid": "#3D3427", "gray-light": "#4B4133",
-              cream: "#FBF6EC", "cream-soft": "#F1E8D6", "cream-dim": "#D9CDB8",
-              sage: "#7FB8A1", "sage-light": "#A9D6C6", "sage-dark": "#4E8E76", "sage-deep": "#356152",
-              whatsapp: "#25D366", "whatsapp-dark": "#1a9f4a", "whatsapp-light": "#5DEE92"
+              yellow: "#F6A23C", "yellow-light": "#FBC77D", "yellow-dark": "#D9821E", "yellow-warm": "#F2952A",
+              red: "#A40606", "red-light": "#C62828", "red-dark": "#7E0404", "red-deep": "#5E0202",
+              // "black-*" se reutiliza como SUPERFICIES CLARAS (cremas/ámbar) sobre el fondo amarillo
+              black: "#FCE6AE", "black-soft": "#F8D88C", "black-deeper": "#EFC067", "black-pure": "#E3AC4A",
+              gray: "#E8D6AE", "gray-mid": "#DFC893", "gray-light": "#D2B679",
+              cream: "#FFF8EA", "cream-soft": "#F7EFDD", "cream-dim": "#E7D8B8",
+              // sage remapeado a Dark Slate Grey: acento secundario en ciertas partes
+              sage: "#2B4141", "sage-light": "#3E5A5A", "sage-dark": "#1F3030", "sage-deep": "#162424",
+              whatsapp: "#1E9E4B", "whatsapp-dark": "#157A39", "whatsapp-light": "#127A38"
             }
           },
           fontFamily: {
@@ -54,15 +57,15 @@
             "bounce-slow": { "0%,100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-6px)" } }
           },
           boxShadow: {
-            "btn-yellow": "0 5px 0 #CE8E1E, 0 8px 20px rgba(242,178,51,0.22), inset 0 1px 0 rgba(255,255,255,0.35)",
-            "btn-yellow-hover": "0 3px 0 #CE8E1E, 0 5px 14px rgba(242,178,51,0.3), inset 0 1px 0 rgba(255,255,255,0.35)",
-            "btn-red": "0 5px 0 #B23E28, 0 8px 20px rgba(217,84,59,0.22), inset 0 1px 0 rgba(255,255,255,0.18)",
-            "btn-red-hover": "0 3px 0 #B23E28, 0 5px 14px rgba(217,84,59,0.3), inset 0 1px 0 rgba(255,255,255,0.18)",
-            "btn-wa": "0 5px 0 #1a9f4a, 0 8px 20px rgba(37,211,102,0.22), inset 0 1px 0 rgba(255,255,255,0.22)",
-            "btn-wa-hover": "0 3px 0 #1a9f4a, 0 5px 14px rgba(37,211,102,0.3), inset 0 1px 0 rgba(255,255,255,0.22)",
-            "card-hover": "0 22px 48px -16px rgba(20,15,10,0.5), 0 0 30px -14px rgba(242,178,51,0.18)",
-            "card-red-hover": "0 22px 48px -16px rgba(217,84,59,0.28), 0 0 30px -14px rgba(217,84,59,0.2)",
-            "premium": "0 26px 70px -22px rgba(20,15,10,0.55), 0 0 0 1px rgba(242,178,51,0.1)"
+            "btn-yellow": "0 5px 0 #B8700F, 0 8px 20px rgba(246,162,60,0.35), inset 0 1px 0 rgba(255,255,255,0.4)",
+            "btn-yellow-hover": "0 3px 0 #B8700F, 0 5px 14px rgba(246,162,60,0.45), inset 0 1px 0 rgba(255,255,255,0.4)",
+            "btn-red": "0 5px 0 #5E0202, 0 8px 20px rgba(164,6,6,0.3), inset 0 1px 0 rgba(255,255,255,0.18)",
+            "btn-red-hover": "0 3px 0 #5E0202, 0 5px 14px rgba(164,6,6,0.4), inset 0 1px 0 rgba(255,255,255,0.18)",
+            "btn-wa": "0 5px 0 #157A39, 0 8px 20px rgba(30,158,75,0.28), inset 0 1px 0 rgba(255,255,255,0.22)",
+            "btn-wa-hover": "0 3px 0 #157A39, 0 5px 14px rgba(30,158,75,0.36), inset 0 1px 0 rgba(255,255,255,0.22)",
+            "card-hover": "0 22px 48px -16px rgba(95,40,5,0.28), 0 0 30px -14px rgba(246,162,60,0.4)",
+            "card-red-hover": "0 22px 48px -16px rgba(164,6,6,0.28), 0 0 30px -14px rgba(164,6,6,0.25)",
+            "premium": "0 26px 70px -22px rgba(95,40,5,0.3), 0 0 0 1px rgba(164,6,6,0.12)"
           }
         }
       }
@@ -74,20 +77,21 @@
     @layer base {
       html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
       body {
-        @apply bg-mikan-black text-mikan-cream font-sans antialiased;
+        @apply font-sans antialiased;
+        color: #1F1300;
         overflow-x: hidden;
-        background-color: #262019;
+        /* Fondo amarillo con viñeta: centro cálido y bordes ámbar más profundos */
+        background-color: #F6A23C;
         background-image:
-          radial-gradient(at 0% 0%, rgba(242,178,51,0.06) 0px, transparent 45%),
-          radial-gradient(at 100% 100%, rgba(127,184,161,0.05) 0px, transparent 45%),
-          radial-gradient(at 100% 0%, rgba(251,246,236,0.03) 0px, transparent 40%);
+          radial-gradient(135% 110% at 50% 30%, #FCE0A6 0%, #F8C064 42%, #F0992E 72%, #D97E18 100%),
+          radial-gradient(120% 80% at 50% 105%, rgba(164,6,6,0.18) 0%, rgba(164,6,6,0) 50%);
         background-attachment: fixed;
       }
-      ::selection { @apply bg-mikan-yellow text-mikan-black; }
+      ::selection { @apply bg-mikan-red text-mikan-cream; }
       ::-webkit-scrollbar { width: 10px; }
-      ::-webkit-scrollbar-track { background: #1C1812; }
-      ::-webkit-scrollbar-thumb { background: #4B4133; border-radius: 10px; }
-      ::-webkit-scrollbar-thumb:hover { background: #F2B233; }
+      ::-webkit-scrollbar-track { background: #EAC474; }
+      ::-webkit-scrollbar-thumb { background: #D9821E; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #A40606; }
     }
 
     @layer components {
@@ -103,37 +107,37 @@
         opacity: 0.05; pointer-events: none; mix-blend-mode: overlay;
       }
       .grid-pattern {
-        background-image: linear-gradient(rgba(251,246,236,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(251,246,236,0.022) 1px, transparent 1px);
+        background-image: linear-gradient(rgba(95,40,5,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(95,40,5,0.16) 1px, transparent 1px);
         background-size: 56px 56px;
       }
-      .dot-pattern { background-image: radial-gradient(rgba(242,178,51,0.10) 1.2px, transparent 1.2px); background-size: 24px 24px; }
+      .dot-pattern { background-image: radial-gradient(rgba(164,6,6,0.20) 1.4px, transparent 1.4px); background-size: 24px 24px; }
       .paw-pattern {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><g fill='%23F2B233' fill-opacity='0.06'><ellipse cx='24' cy='28' rx='7' ry='6'/><circle cx='14' cy='18' r='3'/><circle cx='24' cy='14' r='3'/><circle cx='34' cy='18' r='3'/></g></svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><g fill='%23F9B208' fill-opacity='0.06'><ellipse cx='24' cy='28' rx='7' ry='6'/><circle cx='14' cy='18' r='3'/><circle cx='24' cy='14' r='3'/><circle cx='34' cy='18' r='3'/></g></svg>");
         background-size: 64px 64px;
       }
       /* ░░░ Fondo decorativo del hero: siluetas dispersas con repel de cursor ░░░ */
       .hero-deco-item { position: absolute; will-change: transform; transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); pointer-events: none; }
       .hero-deco-item svg { display: block; width: 100%; height: 100%; fill: currentColor; }
       @media (prefers-reduced-motion: reduce) { .hero-deco-item { transition: none; } }
-      .diagonal-stripes { background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(242,178,51,0.035) 20px, rgba(242,178,51,0.035) 22px); }
+      .diagonal-stripes { background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(95,40,5,0.05) 20px, rgba(95,40,5,0.05) 22px); }
       .mesh-red {
-        background-color: #2D261D;
+        background-color: #F6C766;
         background-image:
-          radial-gradient(at 18% 25%, rgba(242,178,51,0.16) 0px, transparent 50%),
-          radial-gradient(at 82% 18%, rgba(127,184,161,0.10) 0px, transparent 50%),
-          radial-gradient(at 60% 88%, rgba(217,84,59,0.14) 0px, transparent 50%);
+          radial-gradient(at 18% 25%, rgba(255,235,190,0.85) 0px, transparent 50%),
+          radial-gradient(at 82% 18%, rgba(246,162,60,0.55) 0px, transparent 50%),
+          radial-gradient(at 60% 92%, rgba(164,6,6,0.22) 0px, transparent 55%);
       }
-      .glow-yellow { box-shadow: 0 0 70px -28px rgba(242,178,51,0.32); }
+      .glow-yellow { box-shadow: 0 0 70px -28px rgba(217,126,24,0.45); }
 
-      .text-stroke { -webkit-text-stroke: 2px #F2B233; color: transparent; }
+      .text-stroke { -webkit-text-stroke: 2.5px #A40606; color: transparent; }
 
-      .gradient-text-yellow { background: linear-gradient(135deg, #FAD27A 0%, #F2B233 50%, #CE8E1E 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-      .gradient-text-red { background: linear-gradient(135deg, #E8775E 0%, #D9543B 50%, #B23E28 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+      .gradient-text-yellow { background: linear-gradient(135deg, #EE8A0F 0%, #DC7409 55%, #C05F06 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+      .gradient-text-red { background: linear-gradient(135deg, #C62828 0%, #A40606 50%, #7E0404 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 
       .card-glow { position: relative; }
       .card-glow::before {
         content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px;
-        background: linear-gradient(135deg, rgba(242,178,51,0.45), transparent 42%, transparent 58%, rgba(127,184,161,0.4));
+        background: linear-gradient(135deg, rgba(246,162,60,0.7), transparent 42%, transparent 58%, rgba(164,6,6,0.55));
         -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; opacity: 0; transition: opacity 0.4s;
       }
@@ -143,9 +147,9 @@
       .shine::after { content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent); transition: left 0.7s; }
       .shine:hover::after { left: 150%; }
 
-      .marker-yellow { background: linear-gradient(180deg, transparent 58%, rgba(242,178,51,0.45) 58%, rgba(242,178,51,0.45) 94%, transparent 94%); padding: 0 4px; }
+      .marker-yellow { background: linear-gradient(180deg, transparent 58%, rgba(246,162,60,0.45) 58%, rgba(246,162,60,0.45) 94%, transparent 94%); padding: 0 4px; }
 
-      /* ░░░ Composición ANTES / ¡DESPUÉS! — peluquería y baños ░░░ */
+      /* ░░░ Composición de imágenes superpuestas — camas, juguetes y accesorios ░░░ */
       .spa-compo {
         --antes-w: clamp(376px, 34.5vw, 447px); --antes-h: clamp(548px, 52vw, 670px); --despues-w: clamp(376px, 34.5vw, 447px); --despues-h: clamp(500px, 47.5vw, 610px); --compo-h: clamp(636px, 61vw, 788px); --compo-max: 760px;
         position: relative; width: 100%; max-width: var(--compo-max); height: var(--compo-h); margin-inline: auto;
@@ -158,20 +162,20 @@
       .spa-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
       .spa-card::after {
         content: ""; position: absolute; inset: 0;
-        background: linear-gradient(to top, rgba(20,16,12,0.45), transparent 42%), rgba(242,178,51,0.06);
+        background: linear-gradient(to top, rgba(95,40,5,0.32), transparent 42%), rgba(246,162,60,0.05);
         mix-blend-mode: soft-light; pointer-events: none;
       }
       .spa-card--antes { width: var(--antes-w); height: var(--antes-h); top: 0; left: 0; transform: rotate(-2.5deg); z-index: 1; }
       .spa-card--despues { width: var(--despues-w); height: var(--despues-h); top: 95px; right: 0; transform: rotate(1.5deg); z-index: 2; }
       /* Hover sobre ANTES → pasa al frente, se eleva y escala con sombra envolvente + halo cálido; DESPUÉS retrocede, baja, escala menos, se oscurece y desatura */
-      .spa-compo:has(.spa-card--antes:hover) .spa-card--antes { z-index: 4; transform: rotate(-1.2deg) translate(28px,-14px) scale(1.05); box-shadow: 0 36px 90px rgba(0,0,0,0.5), 0 0 60px rgba(245,181,68,0.22); }
+      .spa-compo:has(.spa-card--antes:hover) .spa-card--antes { z-index: 4; transform: rotate(-1.2deg) translate(28px,-14px) scale(1.05); box-shadow: 0 36px 90px rgba(0,0,0,0.5), 0 0 60px rgba(246,162,60,0.24); }
       .spa-compo:has(.spa-card--antes:hover) .spa-card--despues { z-index: 1; transform: rotate(4deg) translate(40px,30px) scale(0.93); filter: brightness(0.78) saturate(0.9); opacity: 0.97; }
       /* Hover sobre DESPUÉS (ya está al frente) → se eleva con halo cálido; ANTES se atenúa y desatura por detrás */
-      .spa-compo:has(.spa-card--despues:hover):not(:has(.spa-card--antes:hover)) .spa-card--despues { transform: rotate(1deg) translateY(-14px) scale(1.045); box-shadow: 0 36px 90px rgba(0,0,0,0.5), 0 0 60px rgba(245,181,68,0.22); }
+      .spa-compo:has(.spa-card--despues:hover):not(:has(.spa-card--antes:hover)) .spa-card--despues { transform: rotate(1deg) translateY(-14px) scale(1.045); box-shadow: 0 36px 90px rgba(0,0,0,0.5), 0 0 60px rgba(246,162,60,0.24); }
       .spa-compo:has(.spa-card--despues:hover):not(:has(.spa-card--antes:hover)) .spa-card--antes { transform: rotate(-3.5deg) translateY(10px) scale(0.955); filter: brightness(0.85) saturate(0.92); }
       .spa-badge { position: absolute; top: 16px; left: 16px; z-index: 5; @apply rounded-full px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.15em]; }
-      .spa-badge--antes { @apply bg-mikan-black/75 text-white border border-white/20 backdrop-blur-md; }
-      .spa-badge--despues { @apply bg-mikan-red text-white shadow-lg; }
+      .spa-badge--antes { @apply bg-mikan-cream/85 text-white border border-mikan-red/20 backdrop-blur-md; }
+      .spa-badge--despues { @apply bg-mikan-red text-mikan-cream shadow-lg; }
 
       @media (max-width: 1023px) {
         .spa-compo { --antes-w: 373px; --antes-h: 540px; --despues-w: 373px; --despues-h: 494px; --compo-h: 632px; --compo-max: 645px; }
@@ -196,27 +200,10 @@
       .aspect-square2 { aspect-ratio: 1 / 1; }
     }
 
-@media (prefers-reduced-motion: reduce) {
-  .spa-card { transition-duration: 0.01ms !important; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
     }
   </style>
-  <style>
-  @keyframes float { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-10px) rotate(1deg)} }
-  @keyframes float-slow { 0%,100%{transform:translate(0,0)} 33%{transform:translate(20px,-15px)} 66%{transform:translate(-15px,10px)} }
-  @keyframes pulse-ring { 0%{box-shadow:0 0 0 0 rgba(37,211,102,.55),0 0 0 0 rgba(37,211,102,.3)} 70%{box-shadow:0 0 0 18px rgba(37,211,102,0),0 0 0 36px rgba(37,211,102,0)} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 0 0 0 rgba(37,211,102,0)} }
-  @keyframes pulse-glow { 0%,100%{opacity:.55;transform:scale(1)} 50%{opacity:.85;transform:scale(1.03)} }
-  @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-  @keyframes spin-slow-kf { to{transform:rotate(360deg)} }
-  @keyframes bounce-slow { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
-
-  .animate-float       { animation: float 4s ease-in-out infinite; }
-  .animate-float-slow  { animation: float-slow 6s ease-in-out infinite; }
-  .animate-pulse-ring  { animation: pulse-ring 2s cubic-bezier(.455,.03,.515,.955) infinite; }
-  .animate-pulse-glow  { animation: pulse-glow 3s ease-in-out infinite; }
-  .animate-marquee     { animation: marquee 30s linear infinite; }
-  .animate-spin-slow   { animation: spin-slow-kf 20s linear infinite; }
-  .animate-bounce-slow { animation: bounce-slow 3s ease-in-out infinite; }
-</style>
 </head>
 
 <body class="font-sans">
@@ -227,15 +214,13 @@
     <div id="announce" class="relative z-[55] bg-gradient-to-r from-mikan-red via-mikan-red-dark to-mikan-red overflow-hidden">
       <div class="absolute inset-0 diagonal-stripes opacity-40"></div>
       <div class="container-mikan relative flex items-center justify-center gap-3 py-2.5">
-        <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-center group">
-          <i data-lucide="truck" class="w-4 h-4 text-mikan-yellow shrink-0 animate-bounce-slow"></i>
-          <span class="text-[11px] sm:text-xs font-extrabold uppercase tracking-wide text-white">
-            Delivery en el día en Hurlingham y zona
-            <span class="hidden sm:inline text-mikan-yellow"> · Pedí por WhatsApp ahora</span>
-            <span class="ml-1.5 underline decoration-mikan-yellow decoration-2 underline-offset-2 text-mikan-yellow group-hover:decoration-white transition-colors">Pedir →</span>
+        <div class="flex items-center gap-2 text-center">
+          <i data-lucide="badge-percent" class="w-4 h-4 text-mikan-yellow shrink-0 animate-bounce-slow"></i>
+          <span class="text-[11px] sm:text-xs font-extrabold uppercase tracking-wide text-mikan-cream">
+            Los días <span class="text-mikan-yellow">jueves</span> en <span class="text-mikan-yellow">EFECTIVO</span> hay 10% de descuento
           </span>
-        </a>
-        <button onclick="document.getElementById('announce').remove()" aria-label="Cerrar aviso" class="absolute right-4 w-6 h-6 flex items-center justify-center rounded-full hover:bg-white/15 text-white/70 hover:text-white transition-colors">
+        </div>
+        <button onclick="document.getElementById('announce').remove()" aria-label="Cerrar aviso" class="absolute right-4 w-6 h-6 flex items-center justify-center rounded-full hover:bg-mikan-cream/20 text-mikan-cream/70 hover:text-mikan-cream transition-colors">
           <i data-lucide="x" class="w-3.5 h-3.5"></i>
         </button>
       </div>
@@ -244,22 +229,22 @@
     <header id="site-header" class="transition-all duration-300 bg-gradient-to-b from-mikan-black/80 to-transparent py-4">
       <div class="container-mikan flex items-center justify-between">
         <a href="#" class="flex items-center gap-3">
-          <div class="bg-mikan-yellow text-mikan-black font-display text-xl sm:text-2xl px-3 py-1 rounded-md tracking-wider shadow-lg shadow-mikan-yellow/20">MIKAN</div>
+          <div class="bg-mikan-yellow text-white font-display text-xl sm:text-2xl px-3 py-1 rounded-md tracking-wider shadow-lg shadow-mikan-yellow/20">MIKAN</div>
           <span class="hidden sm:block text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Pet Shop · Hurlingham</span>
         </a>
 
         <nav class="hidden lg:flex items-center gap-7">
-          <a href="#servicios" class="relative text-sm font-semibold text-white/70 hover:text-mikan-yellow transition-colors group">Servicios<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-mikan-yellow group-hover:w-full transition-all duration-300"></span></a>
-          <a href="#delivery" class="relative text-sm font-semibold text-white/70 hover:text-mikan-yellow transition-colors group">Delivery<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-mikan-yellow group-hover:w-full transition-all duration-300"></span></a>
-          <a href="#peluqueria" class="relative text-sm font-semibold text-white/70 hover:text-mikan-yellow transition-colors group">Peluquería<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-mikan-yellow group-hover:w-full transition-all duration-300"></span></a>
-          <a href="#faq" class="relative text-sm font-semibold text-white/70 hover:text-mikan-yellow transition-colors group">Rescate<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-mikan-yellow group-hover:w-full transition-all duration-300"></span></a>
-          <a href="#ubicacion" class="relative text-sm font-semibold text-white/70 hover:text-mikan-yellow transition-colors group">Contacto<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-mikan-yellow group-hover:w-full transition-all duration-300"></span></a>
+          <a href="#servicios" class="relative text-sm font-semibold text-white/70 hover:text-mikan-red transition-colors group">Servicios<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-mikan-yellow group-hover:w-full transition-all duration-300"></span></a>
+          <a href="#delivery" class="relative text-sm font-semibold text-white/70 hover:text-mikan-red transition-colors group">Delivery<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-mikan-yellow group-hover:w-full transition-all duration-300"></span></a>
+          <a href="#peluqueria" class="relative text-sm font-semibold text-white/70 hover:text-mikan-red transition-colors group">Accesorios<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-mikan-yellow group-hover:w-full transition-all duration-300"></span></a>
+          <a href="#faq" class="relative text-sm font-semibold text-white/70 hover:text-mikan-red transition-colors group">Preguntas<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-mikan-yellow group-hover:w-full transition-all duration-300"></span></a>
+          <a href="#ubicacion" class="relative text-sm font-semibold text-white/70 hover:text-mikan-red transition-colors group">Contacto<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-mikan-yellow group-hover:w-full transition-all duration-300"></span></a>
         </nav>
 
         <div class="flex items-center gap-2 sm:gap-3">
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 bg-mikan-red text-white text-[11px] font-extrabold uppercase tracking-wide px-4 py-2.5 rounded-lg shadow-btn-red hover:shadow-btn-red-hover hover:translate-y-0.5 transition-all"><i data-lucide="truck" class="w-4 h-4"></i> Delivery</a>
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Llegu%C3%A9%20desde%20la%20web%20y%20quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-mikan-whatsapp text-white text-[11px] font-extrabold uppercase tracking-wide px-4 py-2.5 rounded-lg shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all relative"><span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-mikan-yellow animate-pulse"></span><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a>
-          <button aria-label="Abrir menú" onclick="openMenu()" class="lg:hidden w-11 h-11 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white hover:bg-mikan-yellow hover:text-mikan-black hover:border-mikan-yellow transition-all"><i data-lucide="menu" class="w-5 h-5"></i></button>
+          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 bg-mikan-red text-mikan-cream text-[11px] font-extrabold uppercase tracking-wide px-4 py-2.5 rounded-lg shadow-btn-red hover:shadow-btn-red-hover hover:translate-y-0.5 transition-all"><i data-lucide="truck" class="w-4 h-4"></i> Delivery</a>
+          <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Llegu%C3%A9%20desde%20la%20web%20y%20quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-mikan-whatsapp text-mikan-cream text-[11px] font-extrabold uppercase tracking-wide px-4 py-2.5 rounded-lg shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all relative"><span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-mikan-yellow animate-pulse"></span><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a>
+          <button aria-label="Abrir menú" onclick="openMenu()" class="lg:hidden w-11 h-11 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white hover:bg-mikan-yellow hover:text-white hover:border-mikan-yellow transition-all"><i data-lucide="menu" class="w-5 h-5"></i></button>
         </div>
       </div>
     </header>
@@ -269,29 +254,29 @@
   <div id="menu-overlay" onclick="closeMenu()" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[60] hidden"></div>
   <aside id="menu-aside" class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-mikan-black-soft z-[70] border-l border-mikan-yellow/20 flex flex-col translate-x-full transition-transform duration-300">
     <div class="flex items-center justify-between p-5 border-b border-white/5">
-      <div class="bg-mikan-yellow text-mikan-black font-display text-xl px-3 py-1 rounded-md">MIKAN</div>
-      <button aria-label="Cerrar menú" onclick="closeMenu()" class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-white hover:bg-mikan-red hover:text-white transition-colors"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <div class="bg-mikan-yellow text-white font-display text-xl px-3 py-1 rounded-md">MIKAN</div>
+      <button aria-label="Cerrar menú" onclick="closeMenu()" class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 text-white hover:bg-mikan-red hover:text-mikan-cream transition-colors"><i data-lucide="x" class="w-5 h-5"></i></button>
     </div>
     <div class="px-5 py-3 bg-mikan-whatsapp/10 border-b border-white/5 flex items-center gap-2">
       <span class="w-2 h-2 rounded-full bg-mikan-whatsapp animate-pulse"></span>
       <span class="text-xs font-bold text-mikan-whatsapp-light">Estamos en línea · Respondemos en minutos</span>
     </div>
     <nav class="flex-1 px-5 py-6 flex flex-col gap-1 overflow-y-auto">
-      <a href="#servicios" onclick="closeMenu()" class="font-display text-3xl text-white/80 hover:text-mikan-yellow py-3 border-b border-white/5 transition-colors">Servicios</a>
-      <a href="#delivery" onclick="closeMenu()" class="font-display text-3xl text-white/80 hover:text-mikan-yellow py-3 border-b border-white/5 transition-colors">Delivery</a>
-      <a href="#peluqueria" onclick="closeMenu()" class="font-display text-3xl text-white/80 hover:text-mikan-yellow py-3 border-b border-white/5 transition-colors">Peluquería</a>
-      <a href="#faq" onclick="closeMenu()" class="font-display text-3xl text-white/80 hover:text-mikan-yellow py-3 border-b border-white/5 transition-colors">Rescate</a>
-      <a href="#ubicacion" onclick="closeMenu()" class="font-display text-3xl text-white/80 hover:text-mikan-yellow py-3 border-b border-white/5 transition-colors">Contacto</a>
+      <a href="#servicios" onclick="closeMenu()" class="font-display text-3xl text-white/80 hover:text-mikan-red py-3 border-b border-white/5 transition-colors">Servicios</a>
+      <a href="#delivery" onclick="closeMenu()" class="font-display text-3xl text-white/80 hover:text-mikan-red py-3 border-b border-white/5 transition-colors">Delivery</a>
+      <a href="#peluqueria" onclick="closeMenu()" class="font-display text-3xl text-white/80 hover:text-mikan-red py-3 border-b border-white/5 transition-colors">Accesorios</a>
+      <a href="#faq" onclick="closeMenu()" class="font-display text-3xl text-white/80 hover:text-mikan-red py-3 border-b border-white/5 transition-colors">Preguntas</a>
+      <a href="#ubicacion" onclick="closeMenu()" class="font-display text-3xl text-white/80 hover:text-mikan-red py-3 border-b border-white/5 transition-colors">Contacto</a>
     </nav>
     <div class="p-5 flex flex-col gap-3 border-t border-white/5">
-      <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Llegu%C3%A9%20desde%20la%20web%20y%20quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-mikan-whatsapp text-white text-sm font-extrabold uppercase tracking-wide px-5 py-4 rounded-xl shadow-btn-wa"><i data-lucide="message-circle" class="w-4.5 h-4.5"></i> Escribinos ahora</a>
-      <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-mikan-yellow text-mikan-black text-sm font-extrabold uppercase tracking-wide px-5 py-4 rounded-xl shadow-btn-yellow"><i data-lucide="truck" class="w-4.5 h-4.5"></i> Pedir delivery</a>
+      <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Llegu%C3%A9%20desde%20la%20web%20y%20quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-mikan-whatsapp text-mikan-cream text-sm font-extrabold uppercase tracking-wide px-5 py-4 rounded-xl shadow-btn-wa"><i data-lucide="message-circle" class="w-4.5 h-4.5"></i> Escribinos ahora</a>
+      <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-mikan-yellow text-white text-sm font-extrabold uppercase tracking-wide px-5 py-4 rounded-xl shadow-btn-yellow"><i data-lucide="truck" class="w-4.5 h-4.5"></i> Pedir delivery</a>
     </div>
   </aside>
 
   <main>
     <!-- ════════════════ HERO ════════════════ -->
-    <section id="hero" class="relative overflow-hidden pt-28 sm:pt-32 lg:pt-36 pb-20 sm:pb-24 lg:pb-32 bg-mikan-black">
+    <section id="hero" class="relative overflow-hidden pt-28 sm:pt-32 lg:pt-36 pb-20 sm:pb-24 lg:pb-32">
       <div aria-hidden class="absolute inset-0 pointer-events-none">
         <div class="absolute inset-0 grid-pattern opacity-40"></div>
         <div id="hero-deco" class="absolute inset-0 overflow-hidden"></div>
@@ -313,7 +298,7 @@
         <div class="grid lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16 items-center">
           <div class="flex flex-col gap-6 lg:gap-7">
             <div class="flex flex-wrap items-center gap-2.5">
-              <span class="badge-pill bg-mikan-yellow text-mikan-black shadow-lg shadow-mikan-yellow/20"><span class="w-1.5 h-1.5 rounded-full bg-mikan-red animate-pulse"></span> Pet shop en Hurlingham</span>
+              <span class="badge-pill bg-mikan-yellow text-white shadow-lg shadow-mikan-yellow/20"><span class="w-1.5 h-1.5 rounded-full bg-mikan-red animate-pulse"></span> Pet shop en Hurlingham</span>
               <span class="badge-pill bg-white/5 backdrop-blur-md border border-white/15 text-white/80"><i data-lucide="map-pin" class="w-3 h-3"></i> Roca 933</span>
               <span class="badge-pill bg-mikan-whatsapp/15 border border-mikan-whatsapp/30 text-mikan-whatsapp-light"><span class="w-1.5 h-1.5 rounded-full bg-mikan-whatsapp animate-pulse"></span> Abierto ahora</span>
             </div>
@@ -325,11 +310,11 @@
               <span class="block text-white">de tu casa.</span>
             </h1>
 
-            <p class="text-base sm:text-lg lg:text-xl text-white/70 leading-relaxed max-w-xl">Alimentos, peluquería, accesorios y <span class="marker-yellow text-white font-bold">delivery a domicilio</span>. Atendemos a tu familia peluda como si fuera nuestra.</p>
+            <p class="text-base sm:text-lg lg:text-xl text-white/70 leading-relaxed max-w-xl">Alimentos, accesorios, camas, juguetes y <span class="marker-yellow text-white font-bold">delivery a domicilio</span>. Atendemos a tu familia peluda como si fuera nuestra.</p>
 
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Llegu%C3%A9%20desde%20la%20web%20y%20quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="shine relative inline-flex items-center justify-center gap-2.5 bg-mikan-whatsapp text-white text-sm sm:text-base font-extrabold uppercase tracking-wide px-8 py-5 rounded-2xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all"><i data-lucide="message-circle" class="w-5 h-5"></i> Escribinos ahora <i data-lucide="zap" class="w-4 h-4"></i></a>
-              <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="shine inline-flex items-center justify-center gap-2.5 bg-mikan-yellow text-mikan-black text-sm sm:text-base font-extrabold uppercase tracking-wide px-8 py-5 rounded-2xl shadow-btn-yellow hover:shadow-btn-yellow-hover hover:translate-y-0.5 transition-all"><i data-lucide="truck" class="w-5 h-5"></i> Pedir delivery</a>
+              <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Llegu%C3%A9%20desde%20la%20web%20y%20quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="shine relative inline-flex items-center justify-center gap-2.5 bg-mikan-whatsapp text-mikan-cream text-sm sm:text-base font-extrabold uppercase tracking-wide px-8 py-5 rounded-2xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all"><i data-lucide="message-circle" class="w-5 h-5"></i> Escribinos ahora <i data-lucide="zap" class="w-4 h-4"></i></a>
+              <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="shine inline-flex items-center justify-center gap-2.5 bg-mikan-yellow text-white text-sm sm:text-base font-extrabold uppercase tracking-wide px-8 py-5 rounded-2xl shadow-btn-yellow hover:shadow-btn-yellow-hover hover:translate-y-0.5 transition-all"><i data-lucide="truck" class="w-5 h-5"></i> Pedir delivery</a>
             </div>
 
             <div class="flex items-center gap-2.5 text-sm text-white/70">
@@ -342,7 +327,7 @@
             </div>
 
             <div class="flex items-center gap-5 sm:gap-7 mt-1">
-              <div><div class="font-display text-3xl sm:text-4xl gradient-text-yellow leading-none">5+</div><p class="text-[10px] font-bold uppercase tracking-wider text-white/50 mt-1">Años</p></div>
+              <div><div class="font-display text-3xl sm:text-4xl gradient-text-yellow leading-none">10+</div><p class="text-[10px] font-bold uppercase tracking-wider text-white/50 mt-1">Años</p></div>
               <div class="h-10 w-px bg-white/15"></div>
               <div><div class="font-display text-3xl sm:text-4xl gradient-text-yellow leading-none">200+</div><p class="text-[10px] font-bold uppercase tracking-wider text-white/50 mt-1">Familias</p></div>
               <div class="h-10 w-px bg-white/15"></div>
@@ -357,20 +342,20 @@
                 <div class="img-card aspect-portrait shadow-premium">
                   <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1000&q=70" alt="Perro feliz en MIKAN Pet Shop, Hurlingham" />
                   <div class="ov"></div>
-                  <span class="absolute left-3 bottom-3 z-10 text-[10px] font-extrabold uppercase tracking-[0.2em] text-mikan-cream px-3 py-1 rounded-full bg-mikan-black/55 backdrop-blur-sm border border-mikan-cream/15">Familia MIKAN</span>
+                  <span class="absolute left-3 bottom-3 z-10 text-[10px] font-extrabold uppercase tracking-[0.2em] text-mikan-cream px-3 py-1 rounded-full bg-mikan-red/85 backdrop-blur-sm border border-mikan-cream/20">Familia MIKAN</span>
                 </div>
                 <div class="absolute -bottom-6 -left-4 sm:-left-8 bg-mikan-black-soft border border-mikan-yellow/40 rounded-2xl px-4 py-3 shadow-2xl shadow-mikan-yellow/10 flex items-center gap-3 backdrop-blur-md">
                   <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-mikan-yellow to-mikan-yellow-dark flex items-center justify-center text-xl shadow-lg shadow-mikan-yellow/30">⭐</div>
                   <div>
-                    <div class="flex gap-0.5 text-mikan-yellow">
+                    <div class="flex gap-0.5 text-mikan-red">
                       <i data-lucide="star" class="w-3 h-3" fill="currentColor"></i><i data-lucide="star" class="w-3 h-3" fill="currentColor"></i><i data-lucide="star" class="w-3 h-3" fill="currentColor"></i><i data-lucide="star" class="w-3 h-3" fill="currentColor"></i><i data-lucide="star" class="w-3 h-3" fill="currentColor"></i>
                     </div>
                     <p class="text-[11px] text-white font-extrabold mt-0.5">+200 familias felices</p>
                   </div>
                 </div>
-                <div class="absolute -top-5 -right-4 sm:-right-8 bg-mikan-yellow text-mikan-black rounded-2xl px-4 py-3 shadow-2xl shadow-mikan-yellow/30 flex items-center gap-2.5 animate-bounce-slow">
+                <div class="absolute -top-5 -right-4 sm:-right-8 bg-mikan-yellow text-white rounded-2xl px-4 py-3 shadow-2xl shadow-mikan-yellow/30 flex items-center gap-2.5 animate-bounce-slow">
                   <div class="w-9 h-9 rounded-xl bg-mikan-black/15 flex items-center justify-center"><i data-lucide="clock" class="w-4 h-4"></i></div>
-                  <div><p class="text-[9px] font-extrabold uppercase tracking-wider opacity-70">Abierto ahora</p><p class="text-xs font-extrabold leading-none">L-S · 9-13 / 17-20</p></div>
+                  <div><p class="text-[9px] font-extrabold uppercase tracking-wider opacity-70">Abierto ahora</p><p class="text-xs font-extrabold leading-none">L-V 9-20 · Sáb 9-13</p></div>
                 </div>
                 <div class="absolute top-1/3 -right-3 sm:-right-6 w-16 h-16 sm:w-20 sm:h-20 bg-mikan-sage-dark rounded-full flex items-center justify-center shadow-2xl shadow-mikan-sage/30 animate-float">
                   <div class="text-center"><p class="text-[8px] font-extrabold text-mikan-cream uppercase">Delivery</p><p class="text-lg sm:text-xl">🛵</p></div>
@@ -383,23 +368,23 @@
     </section>
 
     <!-- ════════════════ MARQUEE + TRUSTBAR ════════════════ -->
-    <div class="relative overflow-hidden border-y-2 py-4 bg-mikan-yellow text-mikan-black border-mikan-black/10">
+    <div class="relative overflow-hidden border-y-2 py-4 bg-mikan-yellow text-white border-mikan-black/10">
       <div class="flex gap-12 whitespace-nowrap animate-marquee">
         <div class="flex items-center gap-12 shrink-0">
           <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🛵 Delivery a domicilio <span class="text-xl opacity-50">✦</span></span>
-          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">✂️ Peluquería canina <span class="text-xl opacity-50">✦</span></span>
           <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🐾 Alimentos premium <span class="text-xl opacity-50">✦</span></span>
-          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🐱 Rescate de gatitos <span class="text-xl opacity-50">✦</span></span>
-          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🛁 Baños con amor <span class="text-xl opacity-50">✦</span></span>
+          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🛏️ Camas cómodas <span class="text-xl opacity-50">✦</span></span>
+          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🎾 Juguetes y más <span class="text-xl opacity-50">✦</span></span>
           <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🧥 Ropa para mascotas <span class="text-xl opacity-50">✦</span></span>
+          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">💛 Jueves 10% en efectivo <span class="text-xl opacity-50">✦</span></span>
         </div>
         <div class="flex items-center gap-12 shrink-0" aria-hidden="true">
           <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🛵 Delivery a domicilio <span class="text-xl opacity-50">✦</span></span>
-          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">✂️ Peluquería canina <span class="text-xl opacity-50">✦</span></span>
           <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🐾 Alimentos premium <span class="text-xl opacity-50">✦</span></span>
-          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🐱 Rescate de gatitos <span class="text-xl opacity-50">✦</span></span>
-          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🛁 Baños con amor <span class="text-xl opacity-50">✦</span></span>
+          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🛏️ Camas cómodas <span class="text-xl opacity-50">✦</span></span>
+          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🎾 Juguetes y más <span class="text-xl opacity-50">✦</span></span>
           <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">🧥 Ropa para mascotas <span class="text-xl opacity-50">✦</span></span>
+          <span class="flex items-center gap-4 font-display text-2xl sm:text-3xl uppercase tracking-wide">💛 Jueves 10% en efectivo <span class="text-xl opacity-50">✦</span></span>
         </div>
       </div>
     </div>
@@ -412,25 +397,25 @@
           <div class="group relative bg-mikan-black border border-white/10 hover:border-mikan-yellow/40 rounded-2xl p-4 sm:p-5 transition-all duration-300 overflow-hidden card-glow hover:-translate-y-1">
             <div class="relative flex items-start gap-3">
               <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center text-xl sm:text-2xl shrink-0 bg-gradient-to-br from-mikan-yellow/20 to-mikan-yellow/5 border-mikan-yellow/30">🐾</div>
-              <div class="min-w-0"><p class="text-xs sm:text-sm font-extrabold uppercase text-white tracking-wide leading-tight">+5 años en Hurlingham</p><p class="text-[10px] sm:text-xs font-bold mt-1 text-mikan-yellow/80">Te conocemos</p></div>
+              <div class="min-w-0"><p class="text-xs sm:text-sm font-extrabold uppercase text-white tracking-wide leading-tight">+10 años en Hurlingham</p><p class="text-[10px] sm:text-xs font-bold mt-1 text-mikan-red/80">Te conocemos</p></div>
             </div>
           </div>
           <div class="group relative bg-mikan-black border border-white/10 hover:border-mikan-yellow/40 rounded-2xl p-4 sm:p-5 transition-all duration-300 overflow-hidden card-glow hover:-translate-y-1">
             <div class="relative flex items-start gap-3">
-              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center text-xl sm:text-2xl shrink-0 bg-gradient-to-br from-mikan-sage/20 to-mikan-sage/5 border-mikan-sage/30">🛵</div>
-              <div class="min-w-0"><p class="text-xs sm:text-sm font-extrabold uppercase text-white tracking-wide leading-tight">Delivery rápido</p><p class="text-[10px] sm:text-xs font-bold mt-1 text-mikan-sage-light/90">En el día</p></div>
+              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center text-xl sm:text-2xl shrink-0 bg-gradient-to-br from-mikan-red/20 to-mikan-red/5 border-mikan-red/30">🛵</div>
+              <div class="min-w-0"><p class="text-xs sm:text-sm font-extrabold uppercase text-white tracking-wide leading-tight">Delivery rápido</p><p class="text-[10px] sm:text-xs font-bold mt-1 text-mikan-red-light/90">En el día</p></div>
             </div>
           </div>
           <div class="group relative bg-mikan-black border border-white/10 hover:border-mikan-yellow/40 rounded-2xl p-4 sm:p-5 transition-all duration-300 overflow-hidden card-glow hover:-translate-y-1">
             <div class="relative flex items-start gap-3">
-              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center text-xl sm:text-2xl shrink-0 bg-gradient-to-br from-mikan-yellow/20 to-mikan-yellow/5 border-mikan-yellow/30">✂️</div>
-              <div class="min-w-0"><p class="text-xs sm:text-sm font-extrabold uppercase text-white tracking-wide leading-tight">Turnos esta semana</p><p class="text-[10px] sm:text-xs font-bold mt-1 text-mikan-yellow/80">Disponibles</p></div>
+              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center text-xl sm:text-2xl shrink-0 bg-gradient-to-br from-mikan-yellow/20 to-mikan-yellow/5 border-mikan-yellow/30">💛</div>
+              <div class="min-w-0"><p class="text-xs sm:text-sm font-extrabold uppercase text-white tracking-wide leading-tight">Jueves 10% off</p><p class="text-[10px] sm:text-xs font-bold mt-1 text-mikan-red/80">Pagando en efectivo</p></div>
             </div>
           </div>
           <div class="group relative bg-mikan-black border border-white/10 hover:border-mikan-yellow/40 rounded-2xl p-4 sm:p-5 transition-all duration-300 overflow-hidden card-glow hover:-translate-y-1">
             <div class="relative flex items-start gap-3">
-              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center text-xl sm:text-2xl shrink-0 bg-gradient-to-br from-mikan-sage/20 to-mikan-sage/5 border-mikan-sage/30">🐱</div>
-              <div class="min-w-0"><p class="text-xs sm:text-sm font-extrabold uppercase text-white tracking-wide leading-tight">Gatitos en adopción</p><p class="text-[10px] sm:text-xs font-bold mt-1 text-mikan-sage-light/90">Buscando hogar</p></div>
+              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl border flex items-center justify-center text-xl sm:text-2xl shrink-0 bg-gradient-to-br from-mikan-red/20 to-mikan-red/5 border-mikan-red/30">🛏️</div>
+              <div class="min-w-0"><p class="text-xs sm:text-sm font-extrabold uppercase text-white tracking-wide leading-tight">Camas y juguetes</p><p class="text-[10px] sm:text-xs font-bold mt-1 text-mikan-red-light/90">Gran variedad</p></div>
             </div>
           </div>
         </div>
@@ -442,76 +427,66 @@
       <div aria-hidden class="absolute inset-0 pointer-events-none">
         <div class="absolute top-1/3 left-0 w-96 h-96 rounded-full bg-mikan-yellow/5 blur-3xl"></div>
         <div class="absolute bottom-1/3 right-0 w-96 h-96 rounded-full bg-mikan-red/5 blur-3xl"></div>
-        <div class="absolute inset-0 grid-pattern opacity-30"></div>
+        <div class="absolute inset-0 grid-pattern opacity-50"></div>
       </div>
       <div class="container-mikan relative">
         <div class="flex flex-col gap-4 text-center items-center max-w-3xl mx-auto">
-          <span class="badge-pill bg-mikan-yellow text-mikan-black">Nuestros servicios</span>
+          <span class="badge-pill bg-mikan-yellow text-white">Nuestros servicios</span>
           <h2 class="heading-display text-4xl sm:text-5xl lg:text-6xl text-balance text-white">Todo lo que necesita,<br><span class="gradient-text-yellow">en un solo lugar</span></h2>
-          <p class="text-base sm:text-lg text-white/60 leading-relaxed max-w-2xl text-balance">No vendemos productos: cuidamos a tu mascota. Desde el plato de cada día hasta el día de spa, lo resolvemos todo en un solo lugar.</p>
+          <p class="text-base sm:text-lg text-white/60 leading-relaxed max-w-2xl text-balance">No vendemos productos: cuidamos a tu mascota. Desde el plato de cada día hasta su cama y sus juguetes, lo resolvemos todo en un solo lugar.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-4 sm:gap-5 mt-14 sm:mt-20 auto-rows-fr">
-          <!-- LG: Alimentos -->
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-mikan-black via-mikan-black to-mikan-black-deeper border border-white/8 rounded-3xl overflow-hidden transition-all duration-500 hover:border-mikan-red/60 group-hover:shadow-card-red-hover sm:col-span-2 lg:row-span-2 card-glow hover:-translate-y-2">
-            <div aria-hidden class="absolute inset-0 z-0 overflow-hidden"><img src="fotos/servicio-alimentos.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-mikan-black/95 via-mikan-black/80 to-mikan-black/45"></div></div>
+          <!-- LG: Alimentos (card grande izquierda) -->
+          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-[#4A2E12] via-[#2C1C0A] to-[#181005] border border-mikan-cream/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-mikan-red/60 group-hover:shadow-card-red-hover sm:col-span-2 lg:col-span-1 lg:row-span-2 card-glow hover:-translate-y-2">
+            <div aria-hidden class="absolute inset-0 z-0 overflow-hidden"><img src="fotos/servicio-alimentos.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-[#160E05] via-[#23150A]/88 to-[#23150A]/30"></div></div>
             <div class="relative z-10 h-1.5 w-full bg-gradient-to-r from-mikan-red via-mikan-red-light to-mikan-red"></div>
-            <span class="absolute top-5 right-5 z-10 badge-pill bg-mikan-red text-white shadow-lg shadow-mikan-red/40">Más vendido</span>
-            <div class="relative z-10 p-6 sm:p-7 lg:p-10 flex flex-col gap-4 h-full">
-              <div class="flex items-start justify-between"><div class="relative w-16 h-16 lg:w-24 lg:h-24 rounded-2xl bg-gradient-to-br from-mikan-red/20 to-mikan-red-dark/10 border-mikan-red/30 border flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="text-4xl lg:text-5xl">🐕</span></div></div>
-              <div class="flex-1"><h3 class="font-extrabold text-white leading-tight mb-2 text-2xl lg:text-3xl">Alimentos balanceados</h3><p class="text-white/60 leading-relaxed text-base lg:text-lg">Que coma rico y esté fuerte y sano. Te ayudamos a elegir el alimento ideal según su edad, raza y necesidad.</p></div>
-              <div class="flex items-center justify-between pt-3 border-t border-white/5"><span class="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-mikan-red">Consultar disponibilidad</span><span class="w-10 h-10 rounded-full bg-mikan-red/10 border border-mikan-red/30 group-hover:bg-mikan-red flex items-center justify-center transition-all"><i data-lucide="arrow-up-right" class="w-4 h-4 text-mikan-red group-hover:text-white"></i></span></div>
-            </div>
-          </a>
-          <!-- Peluquería -->
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20reservar%20un%20turno%20de%20peluquer%C3%ADa%20para%20mi%20perro%20%E2%9C%82%EF%B8%8F" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-mikan-black via-mikan-black to-mikan-black-deeper border border-white/8 rounded-3xl overflow-hidden transition-all duration-500 hover:border-mikan-yellow/60 card-glow hover:-translate-y-2">
-            <div aria-hidden class="absolute inset-0 z-0 overflow-hidden"><img src="fotos/servicio-peluqueria.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-mikan-black/95 via-mikan-black/80 to-mikan-black/45"></div></div>
-            <div class="relative z-10 h-1.5 w-full bg-gradient-to-r from-mikan-yellow via-mikan-yellow-light to-mikan-yellow"></div>
-            <div class="relative z-10 p-6 sm:p-7 flex flex-col gap-4 h-full">
-              <div class="flex items-start justify-between"><div class="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br from-mikan-yellow/20 to-mikan-yellow-dark/10 border-mikan-yellow/30 border flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="text-3xl sm:text-4xl">✂️</span></div></div>
-              <div class="flex-1"><h3 class="font-extrabold text-white leading-tight mb-2 text-lg sm:text-xl">Peluquería</h3><p class="text-white/60 leading-relaxed text-sm">Vuelve a casa suave, perfumado y feliz. Baño, corte y mimos, hecho con paciencia.</p></div>
-              <div class="flex items-center justify-between pt-3 border-t border-white/5"><span class="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-mikan-yellow">Sacar turno</span><span class="w-10 h-10 rounded-full bg-mikan-yellow/10 border border-mikan-yellow/30 group-hover:bg-mikan-yellow flex items-center justify-center transition-all"><i data-lucide="arrow-up-right" class="w-4 h-4 text-mikan-yellow group-hover:text-mikan-black"></i></span></div>
+            <span class="absolute top-5 right-5 z-10 badge-pill bg-mikan-red text-mikan-cream shadow-lg shadow-mikan-red/40">Más vendido</span>
+            <div class="relative z-10 p-6 sm:p-7 lg:p-9 flex flex-col gap-4 h-full">
+              <div class="flex items-start justify-between"><div class="relative w-16 h-16 lg:w-20 lg:h-20 rounded-2xl bg-gradient-to-br from-mikan-red/30 to-mikan-red-dark/15 border-mikan-red/40 border flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="text-4xl lg:text-5xl">🐕</span></div></div>
+              <div class="flex-1"><h3 class="font-extrabold text-mikan-cream leading-tight mb-2 text-2xl lg:text-3xl">Alimentos balanceados</h3><p class="text-mikan-cream/75 leading-relaxed text-base lg:text-lg">Que coma rico y esté fuerte y sano. Te ayudamos a elegir el alimento ideal según su edad, raza y necesidad.</p></div>
+              <div class="flex items-center justify-between pt-3 border-t border-mikan-cream/10"><span class="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-mikan-yellow">Consultar disponibilidad</span><span class="w-10 h-10 rounded-full bg-mikan-red/20 border border-mikan-red/40 group-hover:bg-mikan-red flex items-center justify-center transition-all"><i data-lucide="arrow-up-right" class="w-4 h-4 text-mikan-yellow group-hover:text-mikan-cream"></i></span></div>
             </div>
           </a>
           <!-- Delivery (highlight) -->
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-mikan-black via-mikan-black to-mikan-black-deeper border border-white/8 rounded-3xl overflow-hidden transition-all duration-500 hover:border-mikan-red/60 ring-2 ring-mikan-red/40 shadow-card-red-hover card-glow hover:-translate-y-2">
-            <div aria-hidden class="absolute inset-0 z-0 overflow-hidden"><img src="fotos/servicio-delivery.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-mikan-black/95 via-mikan-black/80 to-mikan-black/45"></div></div>
+          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-[#4A2E12] via-[#2C1C0A] to-[#181005] border border-mikan-cream/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-mikan-red/60 ring-2 ring-mikan-red/40 shadow-card-red-hover card-glow hover:-translate-y-2">
+            <div aria-hidden class="absolute inset-0 z-0 overflow-hidden"><img src="fotos/servicio-delivery.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-[#160E05] via-[#23150A]/88 to-[#23150A]/30"></div></div>
             <div class="relative z-10 h-1.5 w-full bg-gradient-to-r from-mikan-red via-mikan-red-light to-mikan-red"></div>
-            <span class="absolute top-5 right-5 z-10 badge-pill bg-mikan-red text-white shadow-lg shadow-mikan-red/40">🔥 Hot</span>
+            <span class="absolute top-5 right-5 z-10 badge-pill bg-mikan-red text-mikan-cream shadow-lg shadow-mikan-red/40">🔥 Hot</span>
             <div class="relative z-10 p-6 sm:p-7 flex flex-col gap-4 h-full">
-              <div class="flex items-start justify-between"><div class="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br from-mikan-red/20 to-mikan-red-dark/10 border-mikan-red/30 border flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="text-3xl sm:text-4xl">🛵</span></div></div>
-              <div class="flex-1"><h3 class="font-extrabold text-white leading-tight mb-2 text-lg sm:text-xl">Delivery</h3><p class="text-white/60 leading-relaxed text-sm">No salís de casa: pedís por WhatsApp y lo tenés en tu puerta el mismo día.</p></div>
-              <div class="flex items-center justify-between pt-3 border-t border-white/5"><span class="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-mikan-red">Pedir ahora</span><span class="w-10 h-10 rounded-full bg-mikan-red/10 border border-mikan-red/30 group-hover:bg-mikan-red flex items-center justify-center transition-all"><i data-lucide="arrow-up-right" class="w-4 h-4 text-mikan-red group-hover:text-white"></i></span></div>
+              <div class="flex items-start justify-between"><div class="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br from-mikan-red/30 to-mikan-red-dark/15 border-mikan-red/40 border flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="text-3xl sm:text-4xl">🛵</span></div></div>
+              <div class="flex-1"><h3 class="font-extrabold text-mikan-cream leading-tight mb-2 text-lg sm:text-xl">Delivery</h3><p class="text-mikan-cream/75 leading-relaxed text-sm">No salís de casa: pedís por WhatsApp y lo tenés en tu puerta el mismo día.</p></div>
+              <div class="flex items-center justify-between pt-3 border-t border-mikan-cream/10"><span class="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-mikan-yellow">Pedir ahora</span><span class="w-10 h-10 rounded-full bg-mikan-red/20 border border-mikan-red/40 group-hover:bg-mikan-red flex items-center justify-center transition-all"><i data-lucide="arrow-up-right" class="w-4 h-4 text-mikan-yellow group-hover:text-mikan-cream"></i></span></div>
             </div>
           </a>
           <!-- Accesorios -->
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-mikan-black via-mikan-black to-mikan-black-deeper border border-white/8 rounded-3xl overflow-hidden transition-all duration-500 hover:border-mikan-yellow/60 card-glow hover:-translate-y-2">
-            <div aria-hidden class="absolute inset-0 z-0 overflow-hidden"><img src="fotos/servicio-accesorios.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-mikan-black/95 via-mikan-black/80 to-mikan-black/45"></div></div>
+          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-[#4A2E12] via-[#2C1C0A] to-[#181005] border border-mikan-cream/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-mikan-yellow/60 card-glow hover:-translate-y-2">
+            <div aria-hidden class="absolute inset-0 z-0 overflow-hidden"><img src="fotos/servicio-accesorios.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-[#160E05] via-[#23150A]/88 to-[#23150A]/30"></div></div>
             <div class="relative z-10 h-1.5 w-full bg-gradient-to-r from-mikan-yellow via-mikan-yellow-light to-mikan-yellow"></div>
             <div class="relative z-10 p-6 sm:p-7 flex flex-col gap-4 h-full">
-              <div class="flex items-start justify-between"><div class="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br from-mikan-yellow/20 to-mikan-yellow-dark/10 border-mikan-yellow/30 border flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="text-3xl sm:text-4xl">🐾</span></div></div>
-              <div class="flex-1"><h3 class="font-extrabold text-white leading-tight mb-2 text-lg sm:text-xl">Accesorios</h3><p class="text-white/60 leading-relaxed text-sm">Todo para que esté cómodo y feliz: camas mullidas, juguetes, correas y más.</p></div>
-              <div class="flex items-center justify-between pt-3 border-t border-white/5"><span class="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-mikan-yellow">Ver opciones</span><span class="w-10 h-10 rounded-full bg-mikan-yellow/10 border border-mikan-yellow/30 group-hover:bg-mikan-yellow flex items-center justify-center transition-all"><i data-lucide="arrow-up-right" class="w-4 h-4 text-mikan-yellow group-hover:text-mikan-black"></i></span></div>
+              <div class="flex items-start justify-between"><div class="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br from-mikan-yellow/30 to-mikan-yellow-dark/15 border-mikan-yellow/40 border flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="text-3xl sm:text-4xl">🐾</span></div></div>
+              <div class="flex-1"><h3 class="font-extrabold text-mikan-cream leading-tight mb-2 text-lg sm:text-xl">Accesorios y juguetes</h3><p class="text-mikan-cream/75 leading-relaxed text-sm">Todo para que esté cómodo y feliz: juguetes, correas, comederos, rascadores y más.</p></div>
+              <div class="flex items-center justify-between pt-3 border-t border-mikan-cream/10"><span class="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-mikan-yellow">Ver opciones</span><span class="w-10 h-10 rounded-full bg-mikan-yellow/20 border border-mikan-yellow/40 group-hover:bg-mikan-yellow flex items-center justify-center transition-all"><i data-lucide="arrow-up-right" class="w-4 h-4 text-mikan-yellow group-hover:text-[#1F1300]"></i></span></div>
             </div>
           </a>
-          <!-- Baños -->
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20reservar%20un%20turno%20de%20peluquer%C3%ADa%20para%20mi%20perro%20%E2%9C%82%EF%B8%8F" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-mikan-black via-mikan-black to-mikan-black-deeper border border-white/8 rounded-3xl overflow-hidden transition-all duration-500 hover:border-mikan-red/60 card-glow hover:-translate-y-2">
-            <div aria-hidden class="absolute inset-0 z-0 overflow-hidden"><img src="fotos/servicio-banos.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-mikan-black/95 via-mikan-black/80 to-mikan-black/45"></div></div>
+          <!-- Camas y descanso -->
+          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-[#4A2E12] via-[#2C1C0A] to-[#181005] border border-mikan-cream/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-mikan-red/60 card-glow hover:-translate-y-2">
+            <div aria-hidden class="absolute inset-0 z-0 overflow-hidden"><img src="fotos/cama-acolchada.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-[#160E05] via-[#23150A]/88 to-[#23150A]/30"></div></div>
             <div class="relative z-10 h-1.5 w-full bg-gradient-to-r from-mikan-red via-mikan-red-light to-mikan-red"></div>
             <div class="relative z-10 p-6 sm:p-7 flex flex-col gap-4 h-full">
-              <div class="flex items-start justify-between"><div class="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br from-mikan-red/20 to-mikan-red-dark/10 border-mikan-red/30 border flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="text-3xl sm:text-4xl">🛁</span></div></div>
-              <div class="flex-1"><h3 class="font-extrabold text-white leading-tight mb-2 text-lg sm:text-xl">Baños</h3><p class="text-white/60 leading-relaxed text-sm">Que quede impecable y relajado, con productos suaves para su piel.</p></div>
-              <div class="flex items-center justify-between pt-3 border-t border-white/5"><span class="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-mikan-red">Reservar</span><span class="w-10 h-10 rounded-full bg-mikan-red/10 border border-mikan-red/30 group-hover:bg-mikan-red flex items-center justify-center transition-all"><i data-lucide="arrow-up-right" class="w-4 h-4 text-mikan-red group-hover:text-white"></i></span></div>
+              <div class="flex items-start justify-between"><div class="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br from-mikan-red/30 to-mikan-red-dark/15 border-mikan-red/40 border flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="text-3xl sm:text-4xl">🛏️</span></div></div>
+              <div class="flex-1"><h3 class="font-extrabold text-mikan-cream leading-tight mb-2 text-lg sm:text-xl">Camas y descanso</h3><p class="text-mikan-cream/75 leading-relaxed text-sm">Para que duerma como un rey: camas mullidas, almohadones y cuchas de todos los tamaños.</p></div>
+              <div class="flex items-center justify-between pt-3 border-t border-mikan-cream/10"><span class="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-mikan-yellow">Ver opciones</span><span class="w-10 h-10 rounded-full bg-mikan-red/20 border border-mikan-red/40 group-hover:bg-mikan-red flex items-center justify-center transition-all"><i data-lucide="arrow-up-right" class="w-4 h-4 text-mikan-yellow group-hover:text-mikan-cream"></i></span></div>
             </div>
           </a>
           <!-- Ropa -->
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-mikan-black via-mikan-black to-mikan-black-deeper border border-white/8 rounded-3xl overflow-hidden transition-all duration-500 hover:border-mikan-yellow/60 card-glow hover:-translate-y-2">
-            <div aria-hidden class="absolute inset-0 z-0 overflow-hidden"><img src="fotos/servicio-ropa.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-mikan-black/95 via-mikan-black/80 to-mikan-black/45"></div></div>
+          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-[#4A2E12] via-[#2C1C0A] to-[#181005] border border-mikan-cream/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-mikan-yellow/60 card-glow hover:-translate-y-2">
+            <div aria-hidden class="absolute inset-0 z-0 overflow-hidden"><img src="fotos/servicio-ropa.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-[#160E05] via-[#23150A]/88 to-[#23150A]/30"></div></div>
             <div class="relative z-10 h-1.5 w-full bg-gradient-to-r from-mikan-yellow via-mikan-yellow-light to-mikan-yellow"></div>
             <div class="relative z-10 p-6 sm:p-7 flex flex-col gap-4 h-full">
-              <div class="flex items-start justify-between"><div class="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br from-mikan-yellow/20 to-mikan-yellow-dark/10 border-mikan-yellow/30 border flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="text-3xl sm:text-4xl">🧥</span></div></div>
-              <div class="flex-1"><h3 class="font-extrabold text-white leading-tight mb-2 text-lg sm:text-xl">Ropa</h3><p class="text-white/60 leading-relaxed text-sm">Que pase el invierno calentito y con onda. Buzos, camperas y más.</p></div>
-              <div class="flex items-center justify-between pt-3 border-t border-white/5"><span class="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-mikan-yellow">Ver colección</span><span class="w-10 h-10 rounded-full bg-mikan-yellow/10 border border-mikan-yellow/30 group-hover:bg-mikan-yellow flex items-center justify-center transition-all"><i data-lucide="arrow-up-right" class="w-4 h-4 text-mikan-yellow group-hover:text-mikan-black"></i></span></div>
+              <div class="flex items-start justify-between"><div class="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br from-mikan-yellow/30 to-mikan-yellow-dark/15 border-mikan-yellow/40 border flex items-center justify-center group-hover:scale-110 transition-transform duration-500"><span class="text-3xl sm:text-4xl">🧥</span></div></div>
+              <div class="flex-1"><h3 class="font-extrabold text-mikan-cream leading-tight mb-2 text-lg sm:text-xl">Ropa</h3><p class="text-mikan-cream/75 leading-relaxed text-sm">Que pase el invierno calentito y con onda. Buzos, camperas y más.</p></div>
+              <div class="flex items-center justify-between pt-3 border-t border-mikan-cream/10"><span class="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-mikan-yellow">Ver colección</span><span class="w-10 h-10 rounded-full bg-mikan-yellow/20 border border-mikan-yellow/40 group-hover:bg-mikan-yellow flex items-center justify-center transition-all"><i data-lucide="arrow-up-right" class="w-4 h-4 text-mikan-yellow group-hover:text-[#1F1300]"></i></span></div>
             </div>
           </a>
         </div>
@@ -523,7 +498,7 @@
               <div class="w-14 h-14 rounded-2xl bg-mikan-whatsapp/20 border border-mikan-whatsapp/40 flex items-center justify-center text-2xl">💬</div>
               <div><h3 class="text-lg sm:text-xl font-extrabold text-white">¿No sabés qué necesitás?</h3><p class="text-sm text-white/60">Te ayudamos a elegir lo mejor para tu mascota.</p></div>
             </div>
-            <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quer%C3%ADa%20consultar%20por%20un%20servicio%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="shine relative inline-flex items-center gap-2 bg-mikan-whatsapp text-white text-sm font-extrabold uppercase tracking-wide px-6 py-4 rounded-xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all w-full sm:w-auto justify-center">💬 Hablanos</a>
+            <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quer%C3%ADa%20consultar%20por%20un%20servicio%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="shine relative inline-flex items-center gap-2 bg-mikan-whatsapp text-mikan-cream text-sm font-extrabold uppercase tracking-wide px-6 py-4 rounded-xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all w-full sm:w-auto justify-center">💬 Hablanos</a>
           </div>
         </div>
       </div>
@@ -539,37 +514,37 @@
         <div class="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-center">
           <div class="flex flex-col gap-6 relative">
             <div class="flex flex-wrap items-center gap-2">
-              <span class="badge-pill bg-mikan-yellow text-mikan-black shadow-lg shadow-mikan-yellow/30"><i data-lucide="truck" class="w-3.5 h-3.5"></i> Delivery Hurlingham</span>
-              <span class="badge-pill bg-mikan-black/40 backdrop-blur-md border border-white/20 text-white"><i data-lucide="zap" class="w-3 h-3 text-mikan-yellow"></i> En el día</span>
+              <span class="badge-pill bg-mikan-yellow text-white shadow-lg shadow-mikan-yellow/30"><i data-lucide="truck" class="w-3.5 h-3.5"></i> Delivery Hurlingham</span>
+              <span class="badge-pill bg-mikan-black/40 backdrop-blur-md border border-white/20 text-white"><i data-lucide="zap" class="w-3 h-3 text-mikan-red"></i> En el día</span>
             </div>
             <h2 class="heading-display text-6xl sm:text-7xl lg:text-8xl text-white text-balance leading-[0.88]">Te lo<br>llevamos<br><span class="text-stroke">a casa,</span><br><span class="gradient-text-yellow">ahora mismo.</span></h2>
             <p class="text-base sm:text-lg text-white/90 leading-relaxed max-w-md">No hace falta que salgas. Pedís por WhatsApp, lo confirmamos en minutos y lo tenés en tu puerta.</p>
             <div class="flex flex-col gap-3">
-              <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-mikan-yellow flex items-center gap-2"><i data-lucide="map-pin" class="w-3 h-3"></i> Zonas de cobertura</span>
+              <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-mikan-red flex items-center gap-2"><i data-lucide="map-pin" class="w-3 h-3"></i> Zonas de cobertura</span>
               <div class="flex flex-wrap gap-2">
                 <span class="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-full transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-mikan-yellow animate-pulse"></span> Hurlingham</span>
                 <span class="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-full transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-mikan-yellow animate-pulse"></span> Villa Tesei</span>
                 <span class="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-full transition-colors"><span class="w-1.5 h-1.5 rounded-full bg-mikan-yellow animate-pulse"></span> William Morris</span>
               </div>
             </div>
-            <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="shine relative inline-flex items-center justify-center gap-3 bg-mikan-yellow text-mikan-black text-base sm:text-lg font-extrabold uppercase tracking-wide px-8 py-6 rounded-2xl shadow-btn-yellow hover:shadow-btn-yellow-hover hover:translate-y-0.5 transition-all w-full sm:w-fit mt-3 overflow-hidden"><i data-lucide="message-circle" class="w-5 h-5"></i><span>Pedir mi delivery ahora</span><span class="text-2xl">🛵</span></a>
-            <div class="flex items-center gap-4 text-xs text-white/70"><span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3 h-3 text-mikan-yellow"></i> Respuesta inmediata</span><span class="w-1 h-1 rounded-full bg-white/30"></span><span>Pagás al recibir</span></div>
+            <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="shine relative inline-flex items-center justify-center gap-3 bg-mikan-yellow text-white text-base sm:text-lg font-extrabold uppercase tracking-wide px-8 py-6 rounded-2xl shadow-btn-yellow hover:shadow-btn-yellow-hover hover:translate-y-0.5 transition-all w-full sm:w-fit mt-3 overflow-hidden"><i data-lucide="message-circle" class="w-5 h-5"></i><span>Pedir mi delivery ahora</span><span class="text-2xl">🛵</span></a>
+            <div class="flex items-center gap-4 text-xs text-white/70"><span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3 h-3 text-mikan-red"></i> Respuesta inmediata</span><span class="w-1 h-1 rounded-full bg-white/30"></span><span>Pagás al recibir</span></div>
           </div>
 
           <div class="relative">
             <div class="absolute -inset-4 bg-gradient-to-br from-mikan-yellow/20 via-transparent to-mikan-black/30 blur-2xl rounded-3xl pointer-events-none"></div>
             <div class="relative grid grid-cols-2 gap-4 sm:gap-5">
               <div class="group relative bg-gradient-to-br from-mikan-black/80 to-mikan-black/40 backdrop-blur-xl border border-white/15 hover:border-mikan-yellow/50 rounded-3xl p-5 sm:p-6 transition-all duration-300 overflow-hidden sm:translate-y-8 hover:-translate-y-2">
-                <div class="relative"><div class="flex items-start justify-between mb-4"><span class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">01</span><div class="text-3xl">🐾</div></div><h3 class="font-extrabold text-white text-lg sm:text-xl mb-2">Elegís</h3><p class="text-xs sm:text-sm text-white/70 leading-relaxed">Mirá el catálogo o decinos qué necesitás.</p><div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-mikan-yellow/20 border border-mikan-yellow/40 flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-mikan-yellow"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-mikan-yellow">Paso 01</span></div></div>
+                <div class="relative"><div class="flex items-start justify-between mb-4"><span class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">01</span><div class="text-3xl">🐾</div></div><h3 class="font-extrabold text-white text-lg sm:text-xl mb-2">Elegís</h3><p class="text-xs sm:text-sm text-white/70 leading-relaxed">Mirá el catálogo o decinos qué necesitás.</p><div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-mikan-yellow/20 border border-mikan-yellow/40 flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-mikan-red"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-mikan-red">Paso 01</span></div></div>
               </div>
               <div class="group relative bg-gradient-to-br from-mikan-black/80 to-mikan-black/40 backdrop-blur-xl border border-white/15 hover:border-mikan-yellow/50 rounded-3xl p-5 sm:p-6 transition-all duration-300 overflow-hidden hover:-translate-y-2">
-                <div class="relative"><div class="flex items-start justify-between mb-4"><span class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">02</span><div class="text-3xl">💬</div></div><h3 class="font-extrabold text-white text-lg sm:text-xl mb-2">Escribís</h3><p class="text-xs sm:text-sm text-white/70 leading-relaxed">Mandanos un WhatsApp. Respondemos al toque.</p><div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-mikan-yellow/20 border border-mikan-yellow/40 flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-mikan-yellow"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-mikan-yellow">Paso 02</span></div></div>
+                <div class="relative"><div class="flex items-start justify-between mb-4"><span class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">02</span><div class="text-3xl">💬</div></div><h3 class="font-extrabold text-white text-lg sm:text-xl mb-2">Escribís</h3><p class="text-xs sm:text-sm text-white/70 leading-relaxed">Mandanos un WhatsApp. Respondemos al toque.</p><div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-mikan-yellow/20 border border-mikan-yellow/40 flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-mikan-red"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-mikan-red">Paso 02</span></div></div>
               </div>
               <div class="group relative bg-gradient-to-br from-mikan-black/80 to-mikan-black/40 backdrop-blur-xl border border-white/15 hover:border-mikan-yellow/50 rounded-3xl p-5 sm:p-6 transition-all duration-300 overflow-hidden sm:translate-y-8 hover:-translate-y-2">
-                <div class="relative"><div class="flex items-start justify-between mb-4"><span class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">03</span><div class="text-3xl">✅</div></div><h3 class="font-extrabold text-white text-lg sm:text-xl mb-2">Confirmamos</h3><p class="text-xs sm:text-sm text-white/70 leading-relaxed">Te pasamos el total y coordinamos.</p><div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-mikan-yellow/20 border border-mikan-yellow/40 flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-mikan-yellow"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-mikan-yellow">Paso 03</span></div></div>
+                <div class="relative"><div class="flex items-start justify-between mb-4"><span class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">03</span><div class="text-3xl">✅</div></div><h3 class="font-extrabold text-white text-lg sm:text-xl mb-2">Confirmamos</h3><p class="text-xs sm:text-sm text-white/70 leading-relaxed">Te pasamos el total y coordinamos.</p><div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-mikan-yellow/20 border border-mikan-yellow/40 flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-mikan-red"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-mikan-red">Paso 03</span></div></div>
               </div>
               <div class="group relative bg-gradient-to-br from-mikan-black/80 to-mikan-black/40 backdrop-blur-xl border border-white/15 hover:border-mikan-yellow/50 rounded-3xl p-5 sm:p-6 transition-all duration-300 overflow-hidden hover:-translate-y-2">
-                <div class="relative"><div class="flex items-start justify-between mb-4"><span class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">04</span><div class="text-3xl">🛵</div></div><h3 class="font-extrabold text-white text-lg sm:text-xl mb-2">Lo recibís</h3><p class="text-xs sm:text-sm text-white/70 leading-relaxed">Llegamos en el día. Pagás al recibir.</p><div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-mikan-yellow/20 border border-mikan-yellow/40 flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-mikan-yellow"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-mikan-yellow">Paso 04</span></div></div>
+                <div class="relative"><div class="flex items-start justify-between mb-4"><span class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">04</span><div class="text-3xl">🛵</div></div><h3 class="font-extrabold text-white text-lg sm:text-xl mb-2">Lo recibís</h3><p class="text-xs sm:text-sm text-white/70 leading-relaxed">Llegamos en el día. Pagás al recibir.</p><div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-mikan-yellow/20 border border-mikan-yellow/40 flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-mikan-red"></i></div><span class="text-[10px] font-bold uppercase tracking-wider text-mikan-red">Paso 04</span></div></div>
               </div>
             </div>
           </div>
@@ -579,113 +554,113 @@
 
     <!-- ════════════════ PRODUCTOS ════════════════ -->
     <section class="section-padding bg-mikan-black relative overflow-hidden">
-      <div aria-hidden class="absolute inset-0 pointer-events-none"><div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-mikan-red/10 blur-3xl rounded-full"></div><div class="absolute inset-0 dot-pattern opacity-40"></div></div>
+      <div aria-hidden class="absolute inset-0 pointer-events-none"><div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-mikan-red/10 blur-3xl rounded-full"></div><div class="absolute inset-0 dot-pattern opacity-60"></div></div>
       <div class="container-mikan relative">
         <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div class="max-w-2xl flex flex-col gap-4 text-left items-start">
-            <span class="badge-pill bg-mikan-red text-white">Lo más pedido</span>
+            <span class="badge-pill bg-mikan-red text-mikan-cream">Lo más pedido</span>
             <h2 class="heading-display text-4xl sm:text-5xl lg:text-6xl text-balance text-white">Los favoritos<br><span class="gradient-text-red">de nuestros clientes</span></h2>
             <p class="text-base sm:text-lg text-white/60 leading-relaxed max-w-2xl text-balance">Lo que más sale del local. Si tu mascota lo prueba, no quiere otra cosa.</p>
           </div>
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex items-center gap-2 bg-white/5 hover:bg-mikan-yellow hover:text-mikan-black border border-white/10 hover:border-mikan-yellow text-white text-sm font-extrabold uppercase tracking-wide px-6 py-3 rounded-xl transition-all">Ver catálogo completo →</a>
+          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex items-center gap-2 bg-white/5 hover:bg-mikan-yellow hover:text-white border border-white/10 hover:border-mikan-yellow text-white text-sm font-extrabold uppercase tracking-wide px-6 py-3 rounded-xl transition-all">Ver catálogo completo →</a>
         </div>
 
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
           <!-- prod 1 -->
           <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-mikan-black-soft to-mikan-black border border-white/8 hover:border-mikan-yellow/40 rounded-3xl overflow-hidden hover:shadow-card-hover transition-all duration-500 card-glow hover:-translate-y-2">
             <div class="relative overflow-hidden"><div class="img-card aspect-square2 rounded-none transition-transform duration-700 group-hover:scale-110"><img src="fotos/royal-canin-adulto.jpg" alt="Royal Canin Adulto" /><div class="ov"></div></div>
-              <span class="absolute top-3 left-3 badge-pill backdrop-blur-md bg-mikan-red/95 text-white shadow-lg shadow-mikan-red/30">OFERTA</span>
-              <div class="absolute top-3 right-3 bg-mikan-black/80 backdrop-blur-md border border-white/20 rounded-full px-2.5 py-1 flex items-center gap-1 text-[10px] font-bold text-white"><i data-lucide="trending-up" class="w-2.5 h-2.5 text-mikan-yellow"></i> 142</div>
+              <span class="absolute top-3 left-3 badge-pill backdrop-blur-md bg-mikan-red/95 text-mikan-cream shadow-lg shadow-mikan-red/30">OFERTA</span>
+              <div class="absolute top-3 right-3 bg-mikan-black/80 backdrop-blur-md border border-white/20 rounded-full px-2.5 py-1 flex items-center gap-1 text-[10px] font-bold text-white"><i data-lucide="trending-up" class="w-2.5 h-2.5 text-mikan-red"></i> 142</div>
             </div>
-            <div class="p-4 sm:p-5"><h3 class="font-extrabold text-sm sm:text-base text-white leading-tight group-hover:text-mikan-yellow transition-colors">Royal Canin Adulto</h3><p class="text-xs text-white/50 mt-1">Perros adultos · 15kg</p><div class="mt-4 pt-4 border-t border-white/8 flex items-center justify-between"><div class="leading-none"><span class="block text-[9px] font-bold uppercase tracking-wider text-white/40">Ref.</span><span class="block text-base sm:text-lg font-extrabold text-mikan-yellow mt-0.5">$38.900</span></div><span class="flex items-center gap-1.5 text-mikan-whatsapp"><span class="hidden sm:inline text-[10px] font-extrabold uppercase tracking-wider">Consultar</span><span class="w-9 h-9 rounded-full bg-mikan-whatsapp/15 border border-mikan-whatsapp/30 flex items-center justify-center group-hover:bg-mikan-whatsapp transition-colors"><i data-lucide="plus" class="w-4 h-4 text-mikan-whatsapp group-hover:text-white transition-colors"></i></span></span></div></div>
+            <div class="p-4 sm:p-5"><h3 class="font-extrabold text-sm sm:text-base text-white leading-tight group-hover:text-mikan-red transition-colors">Royal Canin Adulto</h3><p class="text-xs text-white/50 mt-1">Perros adultos · 15kg</p><div class="mt-4 pt-4 border-t border-white/8 flex items-center justify-between"><div class="leading-none"><span class="block text-[9px] font-bold uppercase tracking-wider text-white/40">Ref.</span><span class="block text-base sm:text-lg font-extrabold text-mikan-red mt-0.5">$38.900</span></div><span class="flex items-center gap-1.5 text-mikan-whatsapp"><span class="hidden sm:inline text-[10px] font-extrabold uppercase tracking-wider">Consultar</span><span class="w-9 h-9 rounded-full bg-mikan-whatsapp/15 border border-mikan-whatsapp/30 flex items-center justify-center group-hover:bg-mikan-whatsapp transition-colors"><i data-lucide="plus" class="w-4 h-4 text-mikan-whatsapp group-hover:text-mikan-cream transition-colors"></i></span></span></div></div>
           </a>
           <!-- prod 2 -->
           <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-mikan-black-soft to-mikan-black border border-white/8 hover:border-mikan-yellow/40 rounded-3xl overflow-hidden hover:shadow-card-hover transition-all duration-500 card-glow hover:-translate-y-2">
             <div class="relative overflow-hidden"><div class="img-card aspect-square2 rounded-none transition-transform duration-700 group-hover:scale-110"><img src="fotos/whiskas-gatitos.jpg" alt="Whiskas Gatitos" /><div class="ov"></div></div>
-              <span class="absolute top-3 left-3 badge-pill backdrop-blur-md bg-mikan-yellow/95 text-mikan-black shadow-lg shadow-mikan-yellow/30">NUEVO</span>
-              <div class="absolute top-3 right-3 bg-mikan-black/80 backdrop-blur-md border border-white/20 rounded-full px-2.5 py-1 flex items-center gap-1 text-[10px] font-bold text-white"><i data-lucide="trending-up" class="w-2.5 h-2.5 text-mikan-yellow"></i> 98</div>
+              <span class="absolute top-3 left-3 badge-pill backdrop-blur-md bg-mikan-yellow/95 text-white shadow-lg shadow-mikan-yellow/30">NUEVO</span>
+              <div class="absolute top-3 right-3 bg-mikan-black/80 backdrop-blur-md border border-white/20 rounded-full px-2.5 py-1 flex items-center gap-1 text-[10px] font-bold text-white"><i data-lucide="trending-up" class="w-2.5 h-2.5 text-mikan-red"></i> 98</div>
             </div>
-            <div class="p-4 sm:p-5"><h3 class="font-extrabold text-sm sm:text-base text-white leading-tight group-hover:text-mikan-yellow transition-colors">Whiskas Gatitos</h3><p class="text-xs text-white/50 mt-1">Gatos en crecimiento · 1.5kg</p><div class="mt-4 pt-4 border-t border-white/8 flex items-center justify-between"><div class="leading-none"><span class="block text-[9px] font-bold uppercase tracking-wider text-white/40">Ref.</span><span class="block text-base sm:text-lg font-extrabold text-mikan-yellow mt-0.5">$6.500</span></div><span class="flex items-center gap-1.5 text-mikan-whatsapp"><span class="hidden sm:inline text-[10px] font-extrabold uppercase tracking-wider">Consultar</span><span class="w-9 h-9 rounded-full bg-mikan-whatsapp/15 border border-mikan-whatsapp/30 flex items-center justify-center group-hover:bg-mikan-whatsapp transition-colors"><i data-lucide="plus" class="w-4 h-4 text-mikan-whatsapp group-hover:text-white transition-colors"></i></span></span></div></div>
+            <div class="p-4 sm:p-5"><h3 class="font-extrabold text-sm sm:text-base text-white leading-tight group-hover:text-mikan-red transition-colors">Whiskas Gatitos</h3><p class="text-xs text-white/50 mt-1">Gatos en crecimiento · 1.5kg</p><div class="mt-4 pt-4 border-t border-white/8 flex items-center justify-between"><div class="leading-none"><span class="block text-[9px] font-bold uppercase tracking-wider text-white/40">Ref.</span><span class="block text-base sm:text-lg font-extrabold text-mikan-red mt-0.5">$6.500</span></div><span class="flex items-center gap-1.5 text-mikan-whatsapp"><span class="hidden sm:inline text-[10px] font-extrabold uppercase tracking-wider">Consultar</span><span class="w-9 h-9 rounded-full bg-mikan-whatsapp/15 border border-mikan-whatsapp/30 flex items-center justify-center group-hover:bg-mikan-whatsapp transition-colors"><i data-lucide="plus" class="w-4 h-4 text-mikan-whatsapp group-hover:text-mikan-cream transition-colors"></i></span></span></div></div>
           </a>
           <!-- prod 3 -->
           <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-mikan-black-soft to-mikan-black border border-white/8 hover:border-mikan-yellow/40 rounded-3xl overflow-hidden hover:shadow-card-hover transition-all duration-500 card-glow hover:-translate-y-2">
             <div class="relative overflow-hidden"><div class="img-card aspect-square2 rounded-none transition-transform duration-700 group-hover:scale-110"><img src="fotos/pretal-antitirones.jpg" alt="Pretal anti-tirones" /><div class="ov"></div></div>
-              <span class="absolute top-3 left-3 badge-pill backdrop-blur-md bg-mikan-red/95 text-white shadow-lg shadow-mikan-red/30">DESTACADO</span>
-              <div class="absolute top-3 right-3 bg-mikan-black/80 backdrop-blur-md border border-white/20 rounded-full px-2.5 py-1 flex items-center gap-1 text-[10px] font-bold text-white"><i data-lucide="trending-up" class="w-2.5 h-2.5 text-mikan-yellow"></i> 76</div>
+              <span class="absolute top-3 left-3 badge-pill backdrop-blur-md bg-mikan-red/95 text-mikan-cream shadow-lg shadow-mikan-red/30">DESTACADO</span>
+              <div class="absolute top-3 right-3 bg-mikan-black/80 backdrop-blur-md border border-white/20 rounded-full px-2.5 py-1 flex items-center gap-1 text-[10px] font-bold text-white"><i data-lucide="trending-up" class="w-2.5 h-2.5 text-mikan-red"></i> 76</div>
             </div>
-            <div class="p-4 sm:p-5"><h3 class="font-extrabold text-sm sm:text-base text-white leading-tight group-hover:text-mikan-yellow transition-colors">Pretal anti-tirones</h3><p class="text-xs text-white/50 mt-1">Talles S, M y L</p><div class="mt-4 pt-4 border-t border-white/8 flex items-center justify-between"><div class="leading-none"><span class="block text-[9px] font-bold uppercase tracking-wider text-white/40">Desde</span><span class="block text-base sm:text-lg font-extrabold text-mikan-yellow mt-0.5">$14.200</span></div><span class="flex items-center gap-1.5 text-mikan-whatsapp"><span class="hidden sm:inline text-[10px] font-extrabold uppercase tracking-wider">Consultar</span><span class="w-9 h-9 rounded-full bg-mikan-whatsapp/15 border border-mikan-whatsapp/30 flex items-center justify-center group-hover:bg-mikan-whatsapp transition-colors"><i data-lucide="plus" class="w-4 h-4 text-mikan-whatsapp group-hover:text-white transition-colors"></i></span></span></div></div>
+            <div class="p-4 sm:p-5"><h3 class="font-extrabold text-sm sm:text-base text-white leading-tight group-hover:text-mikan-red transition-colors">Pretal anti-tirones</h3><p class="text-xs text-white/50 mt-1">Talles S, M y L</p><div class="mt-4 pt-4 border-t border-white/8 flex items-center justify-between"><div class="leading-none"><span class="block text-[9px] font-bold uppercase tracking-wider text-white/40">Desde</span><span class="block text-base sm:text-lg font-extrabold text-mikan-red mt-0.5">$14.200</span></div><span class="flex items-center gap-1.5 text-mikan-whatsapp"><span class="hidden sm:inline text-[10px] font-extrabold uppercase tracking-wider">Consultar</span><span class="w-9 h-9 rounded-full bg-mikan-whatsapp/15 border border-mikan-whatsapp/30 flex items-center justify-center group-hover:bg-mikan-whatsapp transition-colors"><i data-lucide="plus" class="w-4 h-4 text-mikan-whatsapp group-hover:text-mikan-cream transition-colors"></i></span></span></div></div>
           </a>
           <!-- prod 4 -->
           <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-br from-mikan-black-soft to-mikan-black border border-white/8 hover:border-mikan-yellow/40 rounded-3xl overflow-hidden hover:shadow-card-hover transition-all duration-500 card-glow hover:-translate-y-2">
             <div class="relative overflow-hidden"><div class="img-card aspect-square2 rounded-none transition-transform duration-700 group-hover:scale-110"><img src="fotos/cama-acolchada.jpg" alt="Cama acolchada" /><div class="ov"></div></div>
-              <span class="absolute top-3 left-3 badge-pill backdrop-blur-md bg-mikan-yellow/95 text-mikan-black shadow-lg shadow-mikan-yellow/30">POPULAR</span>
-              <div class="absolute top-3 right-3 bg-mikan-black/80 backdrop-blur-md border border-white/20 rounded-full px-2.5 py-1 flex items-center gap-1 text-[10px] font-bold text-white"><i data-lucide="trending-up" class="w-2.5 h-2.5 text-mikan-yellow"></i> 124</div>
+              <span class="absolute top-3 left-3 badge-pill backdrop-blur-md bg-mikan-yellow/95 text-white shadow-lg shadow-mikan-yellow/30">POPULAR</span>
+              <div class="absolute top-3 right-3 bg-mikan-black/80 backdrop-blur-md border border-white/20 rounded-full px-2.5 py-1 flex items-center gap-1 text-[10px] font-bold text-white"><i data-lucide="trending-up" class="w-2.5 h-2.5 text-mikan-red"></i> 124</div>
             </div>
-            <div class="p-4 sm:p-5"><h3 class="font-extrabold text-sm sm:text-base text-white leading-tight group-hover:text-mikan-yellow transition-colors">Cama acolchada</h3><p class="text-xs text-white/50 mt-1">Mediana · Lavable</p><div class="mt-4 pt-4 border-t border-white/8 flex items-center justify-between"><div class="leading-none"><span class="block text-[9px] font-bold uppercase tracking-wider text-white/40">Desde</span><span class="block text-base sm:text-lg font-extrabold text-mikan-yellow mt-0.5">$22.000</span></div><span class="flex items-center gap-1.5 text-mikan-whatsapp"><span class="hidden sm:inline text-[10px] font-extrabold uppercase tracking-wider">Consultar</span><span class="w-9 h-9 rounded-full bg-mikan-whatsapp/15 border border-mikan-whatsapp/30 flex items-center justify-center group-hover:bg-mikan-whatsapp transition-colors"><i data-lucide="plus" class="w-4 h-4 text-mikan-whatsapp group-hover:text-white transition-colors"></i></span></span></div></div>
+            <div class="p-4 sm:p-5"><h3 class="font-extrabold text-sm sm:text-base text-white leading-tight group-hover:text-mikan-red transition-colors">Cama acolchada</h3><p class="text-xs text-white/50 mt-1">Mediana · Lavable</p><div class="mt-4 pt-4 border-t border-white/8 flex items-center justify-between"><div class="leading-none"><span class="block text-[9px] font-bold uppercase tracking-wider text-white/40">Desde</span><span class="block text-base sm:text-lg font-extrabold text-mikan-red mt-0.5">$22.000</span></div><span class="flex items-center gap-1.5 text-mikan-whatsapp"><span class="hidden sm:inline text-[10px] font-extrabold uppercase tracking-wider">Consultar</span><span class="w-9 h-9 rounded-full bg-mikan-whatsapp/15 border border-mikan-whatsapp/30 flex items-center justify-center group-hover:bg-mikan-whatsapp transition-colors"><i data-lucide="plus" class="w-4 h-4 text-mikan-whatsapp group-hover:text-mikan-cream transition-colors"></i></span></span></div></div>
           </a>
         </div>
 
         <div class="text-center mt-10 sm:mt-14">
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="shine relative inline-flex items-center gap-2 bg-mikan-whatsapp text-white text-sm sm:text-base font-extrabold uppercase tracking-wide px-8 py-5 rounded-2xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all">💬 Ver todo el catálogo por WhatsApp</a>
+          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="shine relative inline-flex items-center gap-2 bg-mikan-whatsapp text-mikan-cream text-sm sm:text-base font-extrabold uppercase tracking-wide px-8 py-5 rounded-2xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all">💬 Ver todo el catálogo por WhatsApp</a>
         </div>
       </div>
     </section>
 
-    <!-- ════════════════ PELUQUERÍA Y BAÑOS (con composición ANTES/DESPUÉS) ════════════════ -->
+    <!-- ════════════════ CAMAS, JUGUETES Y ACCESORIOS ════════════════ -->
     <section id="peluqueria" class="scroll-mt-nav section-padding bg-mikan-black-soft relative overflow-hidden">
       <div aria-hidden class="absolute inset-0 pointer-events-none">
         <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-mikan-yellow/8 blur-3xl"></div>
         <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-mikan-red/5 blur-3xl"></div>
-        <div class="absolute inset-0 grid-pattern opacity-30"></div>
+        <div class="absolute inset-0 grid-pattern opacity-50"></div>
       </div>
 
       <div class="container-mikan relative">
         <div class="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-          <!-- BLOQUE IZQUIERDO: composición ANTES / ¡DESPUÉS! -->
+          <!-- BLOQUE IZQUIERDO: composición de imágenes -->
           <div class="relative order-2 lg:order-1 flex flex-col items-center">
             <div class="absolute -inset-4 bg-gradient-to-br from-mikan-yellow/15 via-transparent to-mikan-red/15 blur-2xl rounded-3xl pointer-events-none"></div>
             <div class="spa-compo">
               <figure class="spa-card spa-card--antes">
-                <img src="fotos/perro-antes-sucio.png" alt="Perro antes de la peluquería" loading="lazy" />
-                <span class="spa-badge spa-badge--antes">Antes</span>
+                <img src="fotos/perro-cama.png" alt="Perro descansando en su cama" loading="lazy" />
+                <span class="spa-badge spa-badge--antes">Camas</span>
               </figure>
               <figure class="spa-card spa-card--despues">
-                <img src="fotos/perro-despues-spa.png" alt="Perro relajado en el spa después de la peluquería" loading="lazy" />
-                <span class="spa-badge spa-badge--despues">¡Después!</span>
+                <img src="fotos/perro-juguetes.png" alt="Perro rodeado de sus juguetes" loading="lazy" />
+                <span class="spa-badge spa-badge--despues">Juguetes</span>
               </figure>
             </div>
-            <div class="relative z-[5] -mt-2 bg-gradient-to-br from-mikan-yellow to-mikan-yellow-dark text-mikan-black rounded-2xl px-6 py-4 shadow-2xl shadow-mikan-yellow/30 text-center min-w-[220px] border border-mikan-yellow-light/40">
-              <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] opacity-70">Esta semana</p>
-              <p class="text-base sm:text-lg font-extrabold mt-1 flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Turnos disponibles</p>
+            <div class="relative z-[5] -mt-2 bg-gradient-to-br from-mikan-yellow to-mikan-yellow-dark text-white rounded-2xl px-6 py-4 shadow-2xl shadow-mikan-yellow/30 text-center min-w-[220px] border border-mikan-yellow-light/40">
+              <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] opacity-70">Siempre en stock</p>
+              <p class="text-base sm:text-lg font-extrabold mt-1 flex items-center justify-center gap-2"><i data-lucide="sparkles" class="w-4 h-4"></i> Gran variedad</p>
             </div>
           </div>
 
-          <!-- BLOQUE DERECHO (intacto) -->
+          <!-- BLOQUE DERECHO -->
           <div class="flex flex-col gap-6 order-1 lg:order-2">
             <div class="flex items-center gap-2">
-              <span class="badge-pill bg-mikan-yellow text-mikan-black shadow-lg shadow-mikan-yellow/20"><i data-lucide="scissors" class="w-3.5 h-3.5"></i> Peluquería y baños</span>
-              <div class="flex items-center gap-0.5 text-mikan-yellow">
+              <span class="badge-pill bg-mikan-yellow text-white shadow-lg shadow-mikan-yellow/20"><i data-lucide="bone" class="w-3.5 h-3.5"></i> Camas, juguetes y más</span>
+              <div class="flex items-center gap-0.5 text-mikan-red">
                 <i data-lucide="star" class="w-3.5 h-3.5" fill="currentColor"></i><i data-lucide="star" class="w-3.5 h-3.5" fill="currentColor"></i><i data-lucide="star" class="w-3.5 h-3.5" fill="currentColor"></i><i data-lucide="star" class="w-3.5 h-3.5" fill="currentColor"></i><i data-lucide="star" class="w-3.5 h-3.5" fill="currentColor"></i>
                 <span class="text-xs text-white/60 ml-1 font-bold">5.0</span>
               </div>
             </div>
-            <h2 class="heading-display text-5xl sm:text-6xl lg:text-7xl text-white text-balance leading-[0.92]">Tu perro se merece<br><span class="gradient-text-yellow">un día de spa.</span></h2>
-            <p class="text-base sm:text-lg text-white/70 leading-relaxed">Más que un corte: un momento de cariño y dedicación. Trabajamos con paciencia, productos buenos, y siempre devolvemos al perro más feliz de lo que vino.</p>
+            <h2 class="heading-display text-5xl sm:text-6xl lg:text-7xl text-white text-balance leading-[0.92]">Que tenga su rincón<br><span class="gradient-text-yellow">favorito en casa.</span></h2>
+            <p class="text-base sm:text-lg text-white/70 leading-relaxed">Camas mullidas para que descanse como se merece y juguetes para que no pare de divertirse. Te ayudamos a elegir lo ideal según su tamaño y carácter.</p>
             <div class="relative bg-gradient-to-br from-mikan-black/80 to-mikan-black-deeper border border-mikan-yellow/20 rounded-3xl p-6 sm:p-7 overflow-hidden">
               <div aria-hidden class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-mikan-yellow/10 blur-3xl"></div>
-              <p class="relative text-[11px] font-extrabold uppercase tracking-[0.25em] text-mikan-yellow mb-5 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5"></i> Qué incluye el servicio</p>
+              <p class="relative text-[11px] font-extrabold uppercase tracking-[0.25em] text-mikan-red mb-5 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5"></i> Lo que vas a encontrar</p>
               <ul class="relative grid sm:grid-cols-2 gap-x-5 gap-y-3.5">
-                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">🛁</span><span>Baño con shampoo según tipo de pelo</span></li>
-                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">✂️</span><span>Corte a elección o por raza</span></li>
-                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">👂</span><span>Limpieza de oídos</span></li>
-                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">💅</span><span>Corte de uñas</span></li>
-                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">🪮</span><span>Desenredado y cepillado</span></li>
-                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">🎀</span><span>Perfume y lazo de regalo</span></li>
+                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">🛏️</span><span>Camas y cuchas de todos los tamaños</span></li>
+                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">🎾</span><span>Juguetes para perros y gatos</span></li>
+                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">🦴</span><span>Mordillos y huesos</span></li>
+                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">🐈</span><span>Rascadores para gatos</span></li>
+                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">🦮</span><span>Correas, pretales y collares</span></li>
+                <li class="flex items-start gap-3 text-sm text-white/85"><span class="text-base shrink-0">🥣</span><span>Comederos y bebederos</span></li>
               </ul>
             </div>
-            <blockquote class="relative border-l-4 border-mikan-red pl-5 py-2 italic text-white/65 text-sm sm:text-base"><span class="absolute -top-2 -left-2 text-3xl text-mikan-red/30 font-display">&ldquo;</span>Sabemos que dejar a tu mascota con nosotros es un acto de confianza. Por eso la tratamos como si fuera nuestra.</blockquote>
-            <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20reservar%20un%20turno%20de%20peluquer%C3%ADa%20para%20mi%20perro%20%E2%9C%82%EF%B8%8F" target="_blank" rel="noopener noreferrer" class="shine inline-flex items-center justify-center gap-2.5 bg-mikan-whatsapp text-white text-base font-extrabold uppercase tracking-wide px-8 py-5 rounded-2xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all w-full sm:w-fit"><i data-lucide="message-circle" class="w-5 h-5"></i> Reservar turno por WhatsApp</a>
-            <p class="text-xs text-white/40 -mt-2 flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-mikan-yellow"></span> Disponibilidad limitada · Te confirmamos en el día</p>
+            <blockquote class="relative border-l-4 border-mikan-red pl-5 py-2 italic text-white/65 text-sm sm:text-base"><span class="absolute -top-2 -left-2 text-3xl text-mikan-red/30 font-display">&ldquo;</span>Si no sabés qué le puede gustar, contanos cómo es tu mascota y te recomendamos lo mejor.</blockquote>
+            <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quer%C3%ADa%20consultar%20por%20camas%2C%20juguetes%20y%20accesorios%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="shine inline-flex items-center justify-center gap-2.5 bg-mikan-whatsapp text-mikan-cream text-base font-extrabold uppercase tracking-wide px-8 py-5 rounded-2xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all w-full sm:w-fit"><i data-lucide="message-circle" class="w-5 h-5"></i> Consultar por WhatsApp</a>
+            <p class="text-xs text-white/40 -mt-2 flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-mikan-yellow"></span> Con delivery a domicilio · Te respondemos en el día</p>
           </div>
         </div>
       </div>
@@ -693,32 +668,32 @@
 
     <!-- ════════════════ TESTIMONIOS ════════════════ -->
     <section class="section-padding bg-mikan-black relative overflow-hidden">
-      <div aria-hidden class="absolute inset-0 pointer-events-none"><div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-mikan-yellow/8 blur-3xl rounded-full"></div><div class="absolute inset-0 dot-pattern opacity-40"></div></div>
+      <div aria-hidden class="absolute inset-0 pointer-events-none"><div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-mikan-yellow/8 blur-3xl rounded-full"></div><div class="absolute inset-0 dot-pattern opacity-60"></div></div>
       <div class="container-mikan relative">
         <div class="flex flex-col gap-4 text-center items-center max-w-3xl mx-auto">
-          <span class="badge-pill bg-mikan-yellow text-mikan-black">Lo que dicen nuestros clientes</span>
+          <span class="badge-pill bg-mikan-yellow text-white">Lo que dicen nuestros clientes</span>
           <h2 class="heading-display text-4xl sm:text-5xl lg:text-6xl text-balance text-white">Familias que ya<br><span class="gradient-text-yellow">son parte de MIKAN</span></h2>
         </div>
 
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-12 mb-12 sm:mb-16">
           <div class="text-center bg-gradient-to-br from-mikan-black-soft to-mikan-black border border-white/8 hover:border-mikan-yellow/30 rounded-2xl p-4 sm:p-5 transition-colors"><div class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">200+</div><p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-white/50 mt-2">Familias felices</p></div>
-          <div class="text-center bg-gradient-to-br from-mikan-black-soft to-mikan-black border border-white/8 hover:border-mikan-yellow/30 rounded-2xl p-4 sm:p-5 transition-colors"><div class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">5+</div><p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-white/50 mt-2">Años en el barrio</p></div>
+          <div class="text-center bg-gradient-to-br from-mikan-black-soft to-mikan-black border border-white/8 hover:border-mikan-yellow/30 rounded-2xl p-4 sm:p-5 transition-colors"><div class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">10+</div><p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-white/50 mt-2">Años en el barrio</p></div>
           <div class="text-center bg-gradient-to-br from-mikan-black-soft to-mikan-black border border-white/8 hover:border-mikan-yellow/30 rounded-2xl p-4 sm:p-5 transition-colors"><div class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">4.9★</div><p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-white/50 mt-2">Rating Google</p></div>
-          <div class="text-center bg-gradient-to-br from-mikan-black-soft to-mikan-black border border-white/8 hover:border-mikan-yellow/30 rounded-2xl p-4 sm:p-5 transition-colors"><div class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">1500+</div><p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-white/50 mt-2">Servicios al mes</p></div>
+          <div class="text-center bg-gradient-to-br from-mikan-black-soft to-mikan-black border border-white/8 hover:border-mikan-yellow/30 rounded-2xl p-4 sm:p-5 transition-colors"><div class="font-display text-4xl sm:text-5xl gradient-text-yellow leading-none">1500+</div><p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-white/50 mt-2">Productos en stock</p></div>
         </div>
 
         <div class="grid sm:grid-cols-2 gap-4 sm:gap-5">
           <div class="group relative bg-gradient-to-br from-mikan-black-soft to-mikan-black-deeper border border-white/8 rounded-3xl p-6 sm:p-8 hover:border-mikan-yellow/30 hover:shadow-card-hover transition-all duration-500 card-glow overflow-hidden">
-            <div class="relative"><div class="flex items-center justify-between mb-5"><div class="flex gap-0.5 text-mikan-yellow"><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-white/40">Cliente verificado</span></div><p class="text-white/90 text-base sm:text-lg leading-relaxed italic mb-6">&ldquo;Rocco sale siempre divino y lo tratan con un cariño que se nota. Es mi lugar de confianza.&rdquo;</p><div class="flex items-center gap-3 pt-5 border-t border-white/8"><div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-mikan-yellow to-mikan-yellow-dark text-mikan-black font-extrabold flex items-center justify-center text-sm shadow-lg shadow-mikan-yellow/30">MV</div><div class="flex-1"><p class="font-extrabold text-white text-sm sm:text-base">María V. <span class="font-normal text-white/40 text-xs sm:text-sm">· Hurlingham</span></p><p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mt-0.5 text-mikan-yellow">Peluquería</p></div></div></div>
+            <div class="relative"><div class="flex items-center justify-between mb-5"><div class="flex gap-0.5 text-mikan-red"><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-white/40">Reseña de Google</span></div><p class="text-white/90 text-base sm:text-lg leading-relaxed italic mb-6">&ldquo;Tiene los mejores precios de la zona, buena calidad y excelente atención. Cada vez que necesitamos algo para las mascotas venimos acá.&rdquo;</p><div class="flex items-center gap-3 pt-5 border-t border-white/8"><div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-mikan-yellow to-mikan-yellow-dark text-white font-extrabold flex items-center justify-center text-sm shadow-lg shadow-mikan-yellow/30">LB</div><div class="flex-1"><p class="font-extrabold text-white text-sm sm:text-base">Leonardo Bravo</p><p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mt-0.5 text-mikan-red">Google · Cliente desde hace años</p></div></div></div>
           </div>
           <div class="group relative bg-gradient-to-br from-mikan-black-soft to-mikan-black-deeper border border-white/8 rounded-3xl p-6 sm:p-8 hover:border-mikan-yellow/30 hover:shadow-card-hover transition-all duration-500 card-glow overflow-hidden">
-            <div class="relative"><div class="flex items-center justify-between mb-5"><div class="flex gap-0.5 text-mikan-yellow"><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-white/40">Cliente verificado</span></div><p class="text-white/90 text-base sm:text-lg leading-relaxed italic mb-6">&ldquo;Pido el alimento de mis dos perros y me llega en el día. Mejores precios de la zona. No me muevo más.&rdquo;</p><div class="flex items-center gap-3 pt-5 border-t border-white/8"><div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-mikan-red to-mikan-red-dark text-white font-extrabold flex items-center justify-center text-sm shadow-lg shadow-mikan-red/30">JP</div><div class="flex-1"><p class="font-extrabold text-white text-sm sm:text-base">Jorge P. <span class="font-normal text-white/40 text-xs sm:text-sm">· Villa Tesei</span></p><p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mt-0.5 text-mikan-red">Delivery</p></div></div></div>
+            <div class="relative"><div class="flex items-center justify-between mb-5"><div class="flex gap-0.5 text-mikan-red"><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-white/40">Reseña de Google</span></div><p class="text-white/90 text-base sm:text-lg leading-relaxed italic mb-6">&ldquo;Excelente atención y variedad de productos para las mascotas.&rdquo;</p><div class="flex items-center gap-3 pt-5 border-t border-white/8"><div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-mikan-red to-mikan-red-dark text-mikan-cream font-extrabold flex items-center justify-center text-sm shadow-lg shadow-mikan-red/30">C</div><div class="flex-1"><p class="font-extrabold text-white text-sm sm:text-base">claudio</p><p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mt-0.5 text-mikan-red">Local Guide · 117 reseñas</p></div></div></div>
           </div>
           <div class="group relative bg-gradient-to-br from-mikan-black-soft to-mikan-black-deeper border border-white/8 rounded-3xl p-6 sm:p-8 hover:border-mikan-yellow/30 hover:shadow-card-hover transition-all duration-500 card-glow overflow-hidden">
-            <div class="relative"><div class="flex items-center justify-between mb-5"><div class="flex gap-0.5 text-mikan-yellow"><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-white/40">Cliente verificado</span></div><p class="text-white/90 text-base sm:text-lg leading-relaxed italic mb-6">&ldquo;Adoptamos a Pelusa con ellos y hoy es la reina de casa. Gracias por la labor que hacen. ❤️&rdquo;</p><div class="flex items-center gap-3 pt-5 border-t border-white/8"><div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-mikan-yellow to-mikan-yellow-dark text-mikan-black font-extrabold flex items-center justify-center text-sm shadow-lg shadow-mikan-yellow/30">LM</div><div class="flex-1"><p class="font-extrabold text-white text-sm sm:text-base">Lucía M. <span class="font-normal text-white/40 text-xs sm:text-sm">· Hurlingham</span></p><p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mt-0.5 text-mikan-yellow">Adoptó a Pelusa</p></div></div></div>
+            <div class="relative"><div class="flex items-center justify-between mb-5"><div class="flex gap-0.5 text-mikan-red"><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-white/40">Reseña de Google</span></div><p class="text-white/90 text-base sm:text-lg leading-relaxed italic mb-6">&ldquo;Local muy surtido, muy buena atención.&rdquo;</p><div class="flex items-center gap-3 pt-5 border-t border-white/8"><div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-mikan-yellow to-mikan-yellow-dark text-white font-extrabold flex items-center justify-center text-sm shadow-lg shadow-mikan-yellow/30">MD</div><div class="flex-1"><p class="font-extrabold text-white text-sm sm:text-base">Mónica Dupuy</p><p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mt-0.5 text-mikan-red">Local Guide · 31 reseñas</p></div></div></div>
           </div>
           <div class="group relative bg-gradient-to-br from-mikan-black-soft to-mikan-black-deeper border border-white/8 rounded-3xl p-6 sm:p-8 hover:border-mikan-yellow/30 hover:shadow-card-hover transition-all duration-500 card-glow overflow-hidden">
-            <div class="relative"><div class="flex items-center justify-between mb-5"><div class="flex gap-0.5 text-mikan-yellow"><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-white/40">Cliente verificado</span></div><p class="text-white/90 text-base sm:text-lg leading-relaxed italic mb-6">&ldquo;Veníamos primerizos sin saber nada. Nos acompañaron con paciencia. Hoy somos fans.&rdquo;</p><div class="flex items-center gap-3 pt-5 border-t border-white/8"><div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-mikan-red to-mikan-red-dark text-white font-extrabold flex items-center justify-center text-sm shadow-lg shadow-mikan-red/30">FG</div><div class="flex-1"><p class="font-extrabold text-white text-sm sm:text-base">Familia Gómez <span class="font-normal text-white/40 text-xs sm:text-sm">· William Morris</span></p><p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mt-0.5 text-mikan-red">Clientes desde 2023</p></div></div></div>
+            <div class="relative"><div class="flex items-center justify-between mb-5"><div class="flex gap-0.5 text-mikan-red"><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i><i data-lucide="star" class="w-4 h-4" fill="currentColor"></i></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-white/40">Reseña de Google</span></div><p class="text-white/90 text-base sm:text-lg leading-relaxed italic mb-6">&ldquo;Muy lindo! Todo impecable! Amigos tangueros!&rdquo;</p><div class="flex items-center gap-3 pt-5 border-t border-white/8"><div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-mikan-red to-mikan-red-dark text-mikan-cream font-extrabold flex items-center justify-center text-sm shadow-lg shadow-mikan-red/30">CM</div><div class="flex-1"><p class="font-extrabold text-white text-sm sm:text-base">Cintia Montenegro</p><p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mt-0.5 text-mikan-red">Local Guide · 13 reseñas</p></div></div></div>
           </div>
         </div>
       </div>
@@ -726,10 +701,10 @@
 
     <!-- ════════════════ FAQ ════════════════ -->
     <section id="faq" class="scroll-mt-nav section-padding bg-mikan-black relative overflow-hidden">
-      <div aria-hidden class="absolute inset-0 pointer-events-none"><div class="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-mikan-yellow/5 blur-3xl"></div><div class="absolute inset-0 grid-pattern opacity-30"></div></div>
+      <div aria-hidden class="absolute inset-0 pointer-events-none"><div class="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-mikan-yellow/5 blur-3xl"></div><div class="absolute inset-0 grid-pattern opacity-50"></div></div>
       <div class="container-mikan max-w-4xl relative">
         <div class="flex flex-col gap-4 text-center items-center max-w-3xl mx-auto">
-          <span class="badge-pill bg-mikan-yellow text-mikan-black">Preguntas frecuentes</span>
+          <span class="badge-pill bg-mikan-yellow text-white">Preguntas frecuentes</span>
           <h2 class="heading-display text-4xl sm:text-5xl lg:text-6xl text-balance text-white">Resolvemos<br><span class="gradient-text-yellow">tus dudas</span></h2>
           <p class="text-base sm:text-lg text-white/60 leading-relaxed max-w-2xl text-balance">Y si algo no está acá, escribinos: te respondemos en minutos.</p>
         </div>
@@ -748,12 +723,12 @@
             <div class="faq-panel hidden"><div class="px-5 sm:px-6 pb-5 sm:pb-6 pl-14 sm:pl-16"><p class="text-white/70 text-sm sm:text-base leading-relaxed">Depende de la zona y del pedido. En la mayoría de los casos es gratis en compras mayores a cierto monto. Te lo confirmamos al hacer el pedido.</p></div></div>
           </div>
           <div class="faq-item border rounded-2xl overflow-hidden transition-all duration-300 border-white/10 bg-mikan-black-soft/50">
-            <button class="faq-btn w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left"><span class="flex items-center gap-3"><i data-lucide="help-circle" class="w-4.5 h-4.5 text-white/30 shrink-0 faq-icon"></i><span class="faq-q font-bold text-sm sm:text-base text-white">¿Cómo saco turno para la peluquería?</span></span><span class="faq-toggle w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-white/5 text-white border border-white/10"><i data-lucide="plus" class="w-4 h-4"></i></span></button>
-            <div class="faq-panel hidden"><div class="px-5 sm:px-6 pb-5 sm:pb-6 pl-14 sm:pl-16"><p class="text-white/70 text-sm sm:text-base leading-relaxed">Por WhatsApp. Nos escribís, te ofrecemos los horarios disponibles y reservamos. Es rápido y sin compromiso.</p></div></div>
+            <button class="faq-btn w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left"><span class="flex items-center gap-3"><i data-lucide="help-circle" class="w-4.5 h-4.5 text-white/30 shrink-0 faq-icon"></i><span class="faq-q font-bold text-sm sm:text-base text-white">¿Cómo es el descuento de los jueves?</span></span><span class="faq-toggle w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-white/5 text-white border border-white/10"><i data-lucide="plus" class="w-4 h-4"></i></span></button>
+            <div class="faq-panel hidden"><div class="px-5 sm:px-6 pb-5 sm:pb-6 pl-14 sm:pl-16"><p class="text-white/70 text-sm sm:text-base leading-relaxed">Todos los jueves, pagando en efectivo, tenés un 10% de descuento en tu compra. Aplica en el local y también en pedidos por WhatsApp abonados en efectivo.</p></div></div>
           </div>
           <div class="faq-item border rounded-2xl overflow-hidden transition-all duration-300 border-white/10 bg-mikan-black-soft/50">
             <button class="faq-btn w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left"><span class="flex items-center gap-3"><i data-lucide="help-circle" class="w-4.5 h-4.5 text-white/30 shrink-0 faq-icon"></i><span class="faq-q font-bold text-sm sm:text-base text-white">¿Aceptan tarjeta o solo efectivo?</span></span><span class="faq-toggle w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-white/5 text-white border border-white/10"><i data-lucide="plus" class="w-4 h-4"></i></span></button>
-            <div class="faq-panel hidden"><div class="px-5 sm:px-6 pb-5 sm:pb-6 pl-14 sm:pl-16"><p class="text-white/70 text-sm sm:text-base leading-relaxed">Aceptamos efectivo, transferencia y todas las tarjetas (débito y crédito). En delivery también podés pagar al recibir.</p></div></div>
+            <div class="faq-panel hidden"><div class="px-5 sm:px-6 pb-5 sm:pb-6 pl-14 sm:pl-16"><p class="text-white/70 text-sm sm:text-base leading-relaxed">Aceptamos efectivo, transferencia y todas las tarjetas (débito y crédito). En delivery también podés pagar al recibir. Y recordá: los jueves pagando en efectivo tenés 10% de descuento.</p></div></div>
           </div>
           <div class="faq-item border rounded-2xl overflow-hidden transition-all duration-300 border-white/10 bg-mikan-black-soft/50">
             <button class="faq-btn w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left"><span class="flex items-center gap-3"><i data-lucide="help-circle" class="w-4.5 h-4.5 text-white/30 shrink-0 faq-icon"></i><span class="faq-q font-bold text-sm sm:text-base text-white">¿Puedo llevar a mi perro al local?</span></span><span class="faq-toggle w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-white/5 text-white border border-white/10"><i data-lucide="plus" class="w-4 h-4"></i></span></button>
@@ -761,23 +736,23 @@
           </div>
           <div class="faq-item border rounded-2xl overflow-hidden transition-all duration-300 border-white/10 bg-mikan-black-soft/50">
             <button class="faq-btn w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left"><span class="flex items-center gap-3"><i data-lucide="help-circle" class="w-4.5 h-4.5 text-white/30 shrink-0 faq-icon"></i><span class="faq-q font-bold text-sm sm:text-base text-white">¿Cuáles son los horarios de atención?</span></span><span class="faq-toggle w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-white/5 text-white border border-white/10"><i data-lucide="plus" class="w-4 h-4"></i></span></button>
-            <div class="faq-panel hidden"><div class="px-5 sm:px-6 pb-5 sm:pb-6 pl-14 sm:pl-16"><p class="text-white/70 text-sm sm:text-base leading-relaxed">Lunes a sábados de 9 a 13hs y de 17 a 20hs. Domingos cerrado.</p></div></div>
+            <div class="faq-panel hidden"><div class="px-5 sm:px-6 pb-5 sm:pb-6 pl-14 sm:pl-16"><p class="text-white/70 text-sm sm:text-base leading-relaxed">Lunes a viernes de 9 a 13hs y de 17 a 20hs. Sábados solo de 9 a 13hs. Domingos cerrado.</p></div></div>
           </div>
         </div>
 
         <div class="relative mt-12 bg-gradient-to-r from-mikan-whatsapp/15 to-mikan-whatsapp/5 border border-mikan-whatsapp/30 rounded-3xl p-6 sm:p-8 text-center overflow-hidden">
           <div aria-hidden class="absolute -top-10 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full bg-mikan-whatsapp/20 blur-3xl"></div>
-          <div class="relative"><p class="text-white font-extrabold text-lg sm:text-xl mb-1">¿Tenés otra duda?</p><p class="text-white/60 text-sm mb-5">Escribinos y te respondemos al toque, sin compromiso.</p><a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%91%8B" target="_blank" rel="noopener noreferrer" class="shine inline-flex items-center gap-2 bg-mikan-whatsapp text-white text-sm font-extrabold uppercase tracking-wide px-7 py-4 rounded-xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all"><i data-lucide="message-circle" class="w-4.5 h-4.5"></i> Preguntanos por WhatsApp</a></div>
+          <div class="relative"><p class="text-white font-extrabold text-lg sm:text-xl mb-1">¿Tenés otra duda?</p><p class="text-white/60 text-sm mb-5">Escribinos y te respondemos al toque, sin compromiso.</p><a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%91%8B" target="_blank" rel="noopener noreferrer" class="shine inline-flex items-center gap-2 bg-mikan-whatsapp text-mikan-cream text-sm font-extrabold uppercase tracking-wide px-7 py-4 rounded-xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all"><i data-lucide="message-circle" class="w-4.5 h-4.5"></i> Preguntanos por WhatsApp</a></div>
         </div>
       </div>
     </section>
 
     <!-- ════════════════ UBICACIÓN ════════════════ -->
     <section id="ubicacion" class="scroll-mt-nav section-padding bg-mikan-black-soft relative overflow-hidden">
-      <div aria-hidden class="absolute inset-0 pointer-events-none"><div class="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-mikan-red/8 blur-3xl"></div><div class="absolute inset-0 dot-pattern opacity-40"></div></div>
+      <div aria-hidden class="absolute inset-0 pointer-events-none"><div class="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-mikan-red/8 blur-3xl"></div><div class="absolute inset-0 dot-pattern opacity-60"></div></div>
       <div class="container-mikan relative">
         <div class="flex flex-col gap-4 text-center items-center max-w-3xl mx-auto">
-          <span class="badge-pill border border-mikan-yellow/40 text-mikan-yellow">Veninos a visitar</span>
+          <span class="badge-pill border border-mikan-yellow/40 text-mikan-red">Veninos a visitar</span>
           <h2 class="heading-display text-4xl sm:text-5xl lg:text-6xl text-balance text-white">Estamos en el corazón<br><span class="gradient-text-yellow">de Hurlingham</span></h2>
           <p class="text-base sm:text-lg text-white/60 leading-relaxed max-w-2xl text-balance">A pocas cuadras de la estación. Vení a conocernos, traé a tu mascota y llevate lo que necesites en el momento.</p>
         </div>
@@ -786,8 +761,8 @@
           <div class="relative rounded-3xl overflow-hidden border border-white/10 min-h-[340px] sm:min-h-[460px] bg-mikan-black group">
             <iframe src="https://maps.google.com/maps?q=Tte.+Gral.+Julio+Argentino+Roca+933,+Hurlingham&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" class="absolute inset-0 w-full h-full grayscale-[50%] contrast-110 group-hover:grayscale-0 transition-all duration-700" referrerpolicy="no-referrer-when-downgrade" title="MIKAN Pet Shop en Google Maps"></iframe>
             <div aria-hidden class="absolute inset-0 bg-gradient-to-t from-mikan-black/60 via-transparent to-transparent pointer-events-none"></div>
-            <div class="absolute top-4 left-4 bg-mikan-black/80 backdrop-blur-md border border-mikan-yellow/30 rounded-2xl px-4 py-3 flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-mikan-red flex items-center justify-center animate-pulse"><i data-lucide="map-pin" class="w-4.5 h-4.5 text-white"></i></div><div><p class="text-white font-extrabold text-sm leading-tight">MIKAN Pet Shop</p><p class="text-white/60 text-xs">Roca 933, Hurlingham</p></div></div>
-            <a href="https://www.google.com/maps/search/?api=1&query=Tte.+Gral.+Julio+Argentino+Roca+933+Hurlingham" target="_blank" rel="noopener noreferrer" class="shine absolute bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-fit inline-flex items-center justify-center gap-2 bg-mikan-yellow text-mikan-black text-xs sm:text-sm font-extrabold uppercase tracking-wide px-6 py-4 rounded-xl shadow-btn-yellow hover:shadow-btn-yellow-hover hover:translate-y-0.5 transition-all"><i data-lucide="navigation" class="w-4 h-4"></i> Cómo llegar</a>
+            <div class="absolute top-4 left-4 bg-mikan-black/80 backdrop-blur-md border border-mikan-yellow/30 rounded-2xl px-4 py-3 flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-mikan-red flex items-center justify-center animate-pulse"><i data-lucide="map-pin" class="w-4.5 h-4.5 text-mikan-cream"></i></div><div><p class="text-white font-extrabold text-sm leading-tight">MIKAN Pet Shop</p><p class="text-white/60 text-xs">Roca 933, Hurlingham</p></div></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Tte.+Gral.+Julio+Argentino+Roca+933+Hurlingham" target="_blank" rel="noopener noreferrer" class="shine absolute bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-fit inline-flex items-center justify-center gap-2 bg-mikan-yellow text-white text-xs sm:text-sm font-extrabold uppercase tracking-wide px-6 py-4 rounded-xl shadow-btn-yellow hover:shadow-btn-yellow-hover hover:translate-y-0.5 transition-all"><i data-lucide="navigation" class="w-4 h-4"></i> Cómo llegar</a>
           </div>
 
           <div class="bg-gradient-to-br from-mikan-black to-mikan-black-deeper border border-white/10 rounded-3xl p-6 sm:p-7 flex flex-col gap-5">
@@ -797,16 +772,16 @@
             </div>
             <div class="h-px bg-white/8"></div>
             <div>
-              <div class="flex items-center gap-3 mb-2"><div class="w-10 h-10 rounded-xl bg-mikan-yellow/15 border border-mikan-yellow/30 flex items-center justify-center"><i data-lucide="clock" class="w-4.5 h-4.5 text-mikan-yellow"></i></div><span class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-mikan-yellow">Horarios</span><span class="ml-auto inline-flex items-center gap-1.5 text-[10px] font-bold text-mikan-whatsapp bg-mikan-whatsapp/10 border border-mikan-whatsapp/30 px-2.5 py-1 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-mikan-whatsapp animate-pulse"></span> Abierto</span></div>
-              <p class="text-white text-sm"><span class="font-bold">Lunes a sábado</span><br>9:00 — 13:00 hs · 17:00 — 20:00 hs</p><p class="text-mikan-red text-xs font-bold mt-2">Domingos cerrado</p>
+              <div class="flex items-center gap-3 mb-2"><div class="w-10 h-10 rounded-xl bg-mikan-yellow/15 border border-mikan-yellow/30 flex items-center justify-center"><i data-lucide="clock" class="w-4.5 h-4.5 text-mikan-red"></i></div><span class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-mikan-red">Horarios</span><span class="ml-auto inline-flex items-center gap-1.5 text-[10px] font-bold text-mikan-whatsapp bg-mikan-whatsapp/10 border border-mikan-whatsapp/30 px-2.5 py-1 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-mikan-whatsapp animate-pulse"></span> Abierto</span></div>
+              <p class="text-white text-sm"><span class="font-bold">Lunes a viernes</span><br>9:00 — 13:00 hs · 17:00 — 20:00 hs</p><p class="text-white text-sm mt-2"><span class="font-bold">Sábados</span><br>9:00 — 13:00 hs</p><p class="text-mikan-red text-xs font-bold mt-2">Domingos cerrado</p>
             </div>
             <div class="h-px bg-white/8"></div>
             <div class="grid grid-cols-1 gap-2">
-              <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%91%8B" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-mikan-whatsapp transition-colors group"><i data-lucide="phone" class="w-4 h-4 text-mikan-whatsapp group-hover:text-white"></i><div class="flex-1"><p class="text-[10px] font-bold uppercase text-white/50 tracking-wider group-hover:text-white/80">WhatsApp</p><p class="text-sm font-bold text-white">011 2646-6232</p></div><span class="text-[10px] font-bold text-mikan-whatsapp group-hover:text-white uppercase">Chatear →</span></a>
-              <a href="mailto:mikanpetshop1@gmail.com" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-mikan-yellow transition-colors group"><i data-lucide="mail" class="w-4 h-4 text-mikan-yellow group-hover:text-mikan-black"></i><div class="flex-1 min-w-0"><p class="text-[10px] font-bold uppercase text-white/50 tracking-wider group-hover:text-mikan-black/70">Email</p><p class="text-sm font-bold text-white truncate group-hover:text-mikan-black">mikanpetshop1@gmail.com</p></div></a>
-              <a href="https://instagram.com/petshopmikan" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-mikan-red transition-colors group"><i data-lucide="instagram" class="w-4 h-4 text-mikan-red group-hover:text-white"></i><div class="flex-1"><p class="text-[10px] font-bold uppercase text-white/50 tracking-wider group-hover:text-white/80">Instagram</p><p class="text-sm font-bold text-white">@petshopmikan</p></div><span class="text-[10px] font-bold text-mikan-red group-hover:text-white uppercase">Seguir →</span></a>
+              <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%91%8B" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-mikan-whatsapp transition-colors group"><i data-lucide="phone" class="w-4 h-4 text-mikan-whatsapp group-hover:text-mikan-cream"></i><div class="flex-1"><p class="text-[10px] font-bold uppercase text-white/50 tracking-wider group-hover:text-mikan-cream/80">WhatsApp</p><p class="text-sm font-bold text-white group-hover:text-mikan-cream">011 2646-6232</p></div><span class="text-[10px] font-bold text-mikan-whatsapp group-hover:text-mikan-cream uppercase">Chatear →</span></a>
+              <a href="mailto:mikanpetshop1@gmail.com" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-mikan-yellow transition-colors group"><i data-lucide="mail" class="w-4 h-4 text-mikan-red group-hover:text-white"></i><div class="flex-1 min-w-0"><p class="text-[10px] font-bold uppercase text-white/50 tracking-wider group-hover:text-white/70">Email</p><p class="text-sm font-bold text-white truncate group-hover:text-white">mikanpetshop1@gmail.com</p></div></a>
+              <a href="https://instagram.com/petshopmikan" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-mikan-red transition-colors group"><i data-lucide="instagram" class="w-4 h-4 text-mikan-red group-hover:text-mikan-cream"></i><div class="flex-1"><p class="text-[10px] font-bold uppercase text-white/50 tracking-wider group-hover:text-mikan-cream/80">Instagram</p><p class="text-sm font-bold text-white group-hover:text-mikan-cream">@petshopmikan</p></div><span class="text-[10px] font-bold text-mikan-red group-hover:text-mikan-cream uppercase">Seguir →</span></a>
             </div>
-            <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%91%8B" target="_blank" rel="noopener noreferrer" class="shine inline-flex items-center justify-center gap-2 bg-mikan-whatsapp text-white text-sm font-extrabold uppercase tracking-wide px-6 py-4 rounded-xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all w-full mt-1"><i data-lucide="message-circle" class="w-4.5 h-4.5"></i> Consultar antes de venir</a>
+            <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%91%8B" target="_blank" rel="noopener noreferrer" class="shine inline-flex items-center justify-center gap-2 bg-mikan-whatsapp text-mikan-cream text-sm font-extrabold uppercase tracking-wide px-6 py-4 rounded-xl shadow-btn-wa hover:shadow-btn-wa-hover hover:translate-y-0.5 transition-all w-full mt-1"><i data-lucide="message-circle" class="w-4.5 h-4.5"></i> Consultar antes de venir</a>
           </div>
         </div>
       </div>
@@ -822,32 +797,32 @@
         <div aria-hidden class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-mikan-whatsapp/20 blur-3xl"></div>
         <div class="relative text-center sm:text-left"><h3 class="font-display text-2xl sm:text-3xl text-white uppercase">¿Listo para mimar a tu mascota?</h3><p class="text-white/60 text-sm mt-1">Escribinos o pedí tu delivery ahora. Estamos en línea.</p></div>
         <div class="relative flex gap-3 w-full sm:w-auto">
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Llegu%C3%A9%20desde%20la%20web%20y%20quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-mikan-whatsapp text-white text-xs font-extrabold uppercase tracking-wide px-5 py-3.5 rounded-xl shadow-btn-wa hover:translate-y-0.5 transition-transform"><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a>
-          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-mikan-yellow text-mikan-black text-xs font-extrabold uppercase tracking-wide px-5 py-3.5 rounded-xl shadow-btn-yellow hover:translate-y-0.5 transition-transform"><i data-lucide="truck" class="w-4 h-4"></i> Delivery</a>
+          <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Llegu%C3%A9%20desde%20la%20web%20y%20quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-mikan-whatsapp text-mikan-cream text-xs font-extrabold uppercase tracking-wide px-5 py-3.5 rounded-xl shadow-btn-wa hover:translate-y-0.5 transition-transform"><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a>
+          <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-mikan-yellow text-white text-xs font-extrabold uppercase tracking-wide px-5 py-3.5 rounded-xl shadow-btn-yellow hover:translate-y-0.5 transition-transform"><i data-lucide="truck" class="w-4 h-4"></i> Delivery</a>
         </div>
       </div>
 
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-12">
         <div class="col-span-2 lg:col-span-1">
-          <div class="bg-mikan-yellow text-mikan-black font-display text-3xl px-4 py-2 rounded-lg tracking-wider w-fit mb-4">MIKAN</div>
-          <p class="text-white/60 text-sm leading-relaxed mb-4">Pet Shop Hurlingham<br><span class="text-mikan-yellow font-bold">Tu mascota, nuestra familia.</span></p>
-          <a href="https://instagram.com/petshopmikan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-white/60 hover:text-mikan-yellow transition-colors text-sm"><i data-lucide="instagram" class="w-4 h-4"></i> @petshopmikan</a>
+          <div class="bg-mikan-yellow text-white font-display text-3xl px-4 py-2 rounded-lg tracking-wider w-fit mb-4">MIKAN</div>
+          <p class="text-white/60 text-sm leading-relaxed mb-4">Pet Shop Hurlingham<br><span class="text-mikan-red font-bold">Tu mascota, nuestra familia.</span></p>
+          <a href="https://instagram.com/petshopmikan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-white/60 hover:text-mikan-red transition-colors text-sm"><i data-lucide="instagram" class="w-4 h-4"></i> @petshopmikan</a>
         </div>
         <div>
-          <h4 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-mikan-yellow mb-4">Contacto</h4>
+          <h4 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-mikan-red mb-4">Contacto</h4>
           <ul class="space-y-3 text-sm text-white/60">
             <li class="flex items-start gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mt-0.5 shrink-0 text-mikan-red"></i><span>Roca 933, Hurlingham</span></li>
             <li><a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%91%8B" target="_blank" rel="noopener noreferrer" class="flex items-start gap-2 hover:text-mikan-whatsapp transition-colors"><i data-lucide="phone" class="w-3.5 h-3.5 mt-0.5 shrink-0 text-mikan-whatsapp"></i><span>011 2646-6232</span></a></li>
-            <li><a href="mailto:mikanpetshop1@gmail.com" class="flex items-start gap-2 hover:text-mikan-yellow transition-colors break-all"><i data-lucide="mail" class="w-3.5 h-3.5 mt-0.5 shrink-0 text-mikan-yellow"></i><span>mikanpetshop1@gmail.com</span></a></li>
+            <li><a href="mailto:mikanpetshop1@gmail.com" class="flex items-start gap-2 hover:text-mikan-red transition-colors break-all"><i data-lucide="mail" class="w-3.5 h-3.5 mt-0.5 shrink-0 text-mikan-red"></i><span>mikanpetshop1@gmail.com</span></a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-mikan-yellow mb-4">Horarios</h4>
-          <ul class="space-y-2 text-sm text-white/60"><li class="font-bold text-white">Lunes a sábado</li><li>9:00 — 13:00 hs</li><li>17:00 — 20:00 hs</li><li class="text-mikan-red font-bold italic mt-2">Domingos cerrado</li></ul>
+          <h4 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-mikan-red mb-4">Horarios</h4>
+          <ul class="space-y-2 text-sm text-white/60"><li class="font-bold text-white">Lunes a viernes</li><li>9:00 — 13:00 hs</li><li>17:00 — 20:00 hs</li><li class="font-bold text-white mt-2">Sábados</li><li>9:00 — 13:00 hs</li><li class="text-mikan-red font-bold italic mt-2">Domingos cerrado</li></ul>
         </div>
         <div>
-          <h4 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-mikan-yellow mb-4">Acceso rápido</h4>
-          <ul class="space-y-2 text-sm text-white/60"><li><a href="#servicios" class="hover:text-mikan-yellow transition-colors">Servicios</a></li><li><a href="#delivery" class="hover:text-mikan-yellow transition-colors">Delivery</a></li><li><a href="#peluqueria" class="hover:text-mikan-yellow transition-colors">Peluquería</a></li><li><a href="#faq" class="hover:text-mikan-yellow transition-colors">Rescate de gatitos</a></li><li><a href="#faq" class="hover:text-mikan-yellow transition-colors">FAQ</a></li></ul>
+          <h4 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-mikan-red mb-4">Acceso rápido</h4>
+          <ul class="space-y-2 text-sm text-white/60"><li><a href="#servicios" class="hover:text-mikan-red transition-colors">Servicios</a></li><li><a href="#delivery" class="hover:text-mikan-red transition-colors">Delivery</a></li><li><a href="#peluqueria" class="hover:text-mikan-red transition-colors">Camas y juguetes</a></li><li><a href="#ubicacion" class="hover:text-mikan-red transition-colors">Cómo llegar</a></li><li><a href="#faq" class="hover:text-mikan-red transition-colors">Preguntas frecuentes</a></li></ul>
         </div>
       </div>
 
@@ -863,13 +838,13 @@
     <div id="wa-menu" class="bg-mikan-black-soft border border-white/10 rounded-3xl p-3 shadow-2xl w-[280px] hidden">
       <div class="px-3 py-2 mb-1"><p class="text-white font-extrabold text-sm">¿Con qué te ayudamos?</p><p class="text-white/50 text-xs flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-mikan-whatsapp animate-pulse"></span> Respondemos en minutos</p></div>
       <div class="flex flex-col gap-1.5">
-        <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/5 transition-colors"><span class="w-9 h-9 rounded-lg bg-mikan-yellow text-mikan-black flex items-center justify-center shrink-0"><i data-lucide="truck" class="w-4 h-4"></i></span><span class="text-sm font-bold text-white/85">Hacer un pedido / delivery</span></a>
-        <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20reservar%20un%20turno%20de%20peluquer%C3%ADa%20para%20mi%20perro%20%E2%9C%82%EF%B8%8F" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/5 transition-colors"><span class="w-9 h-9 rounded-lg bg-mikan-red text-white flex items-center justify-center shrink-0"><i data-lucide="scissors" class="w-4 h-4"></i></span><span class="text-sm font-bold text-white/85">Turno de peluquería</span></a>
+        <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/5 transition-colors"><span class="w-9 h-9 rounded-lg bg-mikan-yellow text-white flex items-center justify-center shrink-0"><i data-lucide="truck" class="w-4 h-4"></i></span><span class="text-sm font-bold text-white/85">Hacer un pedido / delivery</span></a>
+        <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quer%C3%ADa%20consultar%20por%20camas%2C%20juguetes%20y%20accesorios%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/5 transition-colors"><span class="w-9 h-9 rounded-lg bg-mikan-red text-mikan-cream flex items-center justify-center shrink-0"><i data-lucide="bone" class="w-4 h-4"></i></span><span class="text-sm font-bold text-white/85">Camas, juguetes y accesorios</span></a>
         <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20un%20producto%20en%20la%20web%20y%20quer%C3%ADa%20consultar%20precio%20y%20disponibilidad" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/5 transition-colors"><span class="w-9 h-9 rounded-lg bg-white/10 text-white flex items-center justify-center shrink-0"><i data-lucide="shopping-bag" class="w-4 h-4"></i></span><span class="text-sm font-bold text-white/85">Consultar un producto</span></a>
-        <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Vi%20que%20tienen%20gatitos%20en%20adopci%C3%B3n%2C%20me%20gustar%C3%ADa%20conocerlos%20%F0%9F%90%B1" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/5 transition-colors"><span class="w-9 h-9 rounded-lg bg-white/10 text-white flex items-center justify-center shrink-0"><i data-lucide="cat" class="w-4 h-4"></i></span><span class="text-sm font-bold text-white/85">Adoptar un gatito</span></a>
+        <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quer%C3%ADa%20consultar%20los%20horarios%20de%20atenci%C3%B3n%20%F0%9F%95%92" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/5 transition-colors"><span class="w-9 h-9 rounded-lg bg-white/10 text-white flex items-center justify-center shrink-0"><i data-lucide="clock" class="w-4 h-4"></i></span><span class="text-sm font-bold text-white/85">Horarios y ubicación</span></a>
       </div>
     </div>
-    <button id="wa-fab" onclick="toggleWa()" aria-label="Abrir menú de WhatsApp" class="relative rounded-full text-white flex items-center justify-center shadow-2xl transition-colors bg-mikan-whatsapp animate-pulse-ring" style="width:60px;height:60px">
+    <button id="wa-fab" onclick="toggleWa()" aria-label="Abrir menú de WhatsApp" class="relative rounded-full text-mikan-cream flex items-center justify-center shadow-2xl transition-colors bg-mikan-whatsapp animate-pulse-ring" style="width:60px;height:60px">
       <i id="wa-fab-icon" data-lucide="message-circle" class="w-7 h-7" fill="currentColor"></i>
       <span id="wa-badge" class="absolute -top-1 -right-1 w-5 h-5 bg-mikan-red rounded-full border-2 border-mikan-black flex items-center justify-center text-[10px] font-bold animate-pulse">1</span>
     </button>
@@ -878,8 +853,8 @@
   <!-- ════════════════ BARRA CTA MOBILE ════════════════ -->
   <div id="mobile-cta" class="lg:hidden fixed bottom-0 left-0 right-0 z-40 px-3 pb-3 pt-2 translate-y-full transition-transform duration-300">
     <div class="bg-mikan-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl shadow-black/50 p-2 flex gap-2">
-      <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 bg-mikan-yellow text-mikan-black text-xs font-extrabold uppercase tracking-wide py-3.5 rounded-xl shadow-btn-yellow active:translate-y-0.5 transition-transform"><i data-lucide="truck" class="w-4 h-4"></i> Delivery</a>
-      <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Llegu%C3%A9%20desde%20la%20web%20y%20quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="flex-[1.3] inline-flex items-center justify-center gap-2 bg-mikan-whatsapp text-white text-xs font-extrabold uppercase tracking-wide py-3.5 rounded-xl shadow-btn-wa active:translate-y-0.5 transition-transform relative overflow-hidden"><span class="absolute top-1.5 right-3 w-2 h-2 rounded-full bg-mikan-yellow animate-pulse"></span><i data-lucide="message-circle" class="w-4 h-4"></i> Escribinos ahora</a>
+      <a href="https://wa.me/541126466232?text=%C2%A1Hola%21%20Quiero%20hacer%20un%20pedido%20con%20delivery%20%F0%9F%9B%B5" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 bg-mikan-yellow text-white text-xs font-extrabold uppercase tracking-wide py-3.5 rounded-xl shadow-btn-yellow active:translate-y-0.5 transition-transform"><i data-lucide="truck" class="w-4 h-4"></i> Delivery</a>
+      <a href="https://wa.me/541126466232?text=%C2%A1Hola%20MIKAN%21%20Llegu%C3%A9%20desde%20la%20web%20y%20quer%C3%ADa%20hacer%20una%20consulta%20%F0%9F%90%BE" target="_blank" rel="noopener noreferrer" class="flex-[1.3] inline-flex items-center justify-center gap-2 bg-mikan-whatsapp text-mikan-cream text-xs font-extrabold uppercase tracking-wide py-3.5 rounded-xl shadow-btn-wa active:translate-y-0.5 transition-transform relative overflow-hidden"><span class="absolute top-1.5 right-3 w-2 h-2 rounded-full bg-mikan-yellow animate-pulse"></span><i data-lucide="message-circle" class="w-4 h-4"></i> Escribinos ahora</a>
     </div>
   </div>
 
@@ -910,14 +885,14 @@
           it.className = 'faq-item border rounded-2xl overflow-hidden transition-all duration-300 border-white/10 bg-mikan-black-soft/50';
           var tg = it.querySelector('.faq-toggle'); tg.className = 'faq-toggle w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-white/5 text-white border border-white/10';
           var q = it.querySelector('.faq-q'); q.className = 'faq-q font-bold text-sm sm:text-base text-white';
-          var ic = it.querySelector('.faq-icon'); if(ic) ic.classList.replace('text-mikan-yellow','text-white/30');
+          var ic = it.querySelector('.faq-icon'); if(ic) ic.classList.replace('text-mikan-red','text-white/30');
         });
         if(isOpen) return;
         panel.classList.remove('hidden');
         item.className = 'faq-item border rounded-2xl overflow-hidden transition-all duration-300 border-mikan-yellow/40 bg-gradient-to-br from-mikan-black-soft to-mikan-black shadow-card-hover';
-        var tg = item.querySelector('.faq-toggle'); tg.className = 'faq-toggle w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-mikan-yellow text-mikan-black';
-        var q = item.querySelector('.faq-q'); q.className = 'faq-q font-bold text-sm sm:text-base text-mikan-yellow';
-        var ic = item.querySelector('.faq-icon'); if(ic) ic.classList.replace('text-white/30','text-mikan-yellow');
+        var tg = item.querySelector('.faq-toggle'); tg.className = 'faq-toggle w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-mikan-yellow text-white';
+        var q = item.querySelector('.faq-q'); q.className = 'faq-q font-bold text-sm sm:text-base text-mikan-red';
+        var ic = item.querySelector('.faq-icon'); if(ic) ic.classList.replace('text-white/30','text-mikan-red');
       });
     });
     // primer FAQ abierto por defecto
@@ -931,8 +906,8 @@
       var fab = document.getElementById('wa-fab');
       var icon = document.getElementById('wa-fab-icon');
       var badge = document.getElementById('wa-badge');
-      if(waOpen){ menu.classList.remove('hidden'); fab.className='relative rounded-full text-white flex items-center justify-center shadow-2xl transition-colors bg-mikan-red'; icon.setAttribute('data-lucide','x'); icon.removeAttribute('fill'); badge.classList.add('hidden'); }
-      else { menu.classList.add('hidden'); fab.className='relative rounded-full text-white flex items-center justify-center shadow-2xl transition-colors bg-mikan-whatsapp animate-pulse-ring'; icon.setAttribute('data-lucide','message-circle'); icon.setAttribute('fill','currentColor'); badge.classList.remove('hidden'); }
+      if(waOpen){ menu.classList.remove('hidden'); fab.className='relative rounded-full text-mikan-cream flex items-center justify-center shadow-2xl transition-colors bg-mikan-red'; icon.setAttribute('data-lucide','x'); icon.removeAttribute('fill'); badge.classList.add('hidden'); }
+      else { menu.classList.add('hidden'); fab.className='relative rounded-full text-mikan-cream flex items-center justify-center shadow-2xl transition-colors bg-mikan-whatsapp animate-pulse-ring'; icon.setAttribute('data-lucide','message-circle'); icon.setAttribute('fill','currentColor'); badge.classList.remove('hidden'); }
       if(window.lucide) lucide.createIcons();
     }
 
@@ -967,7 +942,7 @@
         scratcher:'<svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.4"/><rect x="10.6" y="7" width="2.8" height="11" rx="1"/><path d="M6 18h12l1.4 3H4.6z"/></svg>'
       };
 
-      var YEL='#F2B233', CRM='#F5F0E6', SGE='#7FB8A1';
+      var YEL='#C9650A', CRM='#7E0404', SGE='#2B4141';
       // [icon, left%, top%, size px, rotation deg, opacity, color]
       var ITEMS = [
         ['paw',7,16,40,-12,0.09,YEL], ['heart',16,58,30,14,0.08,CRM], ['bone',4,78,46,-20,0.07,YEL],
